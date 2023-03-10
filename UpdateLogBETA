@@ -1,5 +1,5 @@
-Latest Version: 1.1.65-BETA
+Latest Version: 1.1.70-BETA
 - Added Full Account System
-- Updated Security Settings
-- Fixed some known bugs
+- Fixed some bugs with user status
+- Fixed some known bugs with logging
 [ OUTDATED? USE SENTENCE-INT! ]
