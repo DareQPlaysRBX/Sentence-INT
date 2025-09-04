@@ -15201,4 +15201,42 @@ end)()
 -- Start
 Main.Init()
 
+local HttpService = game:GetService("HttpService")
+
+local function serializeInstance(instance)
+    local obj = {
+        Name = instance.Name,
+        ClassName = instance.ClassName,
+        Children = {}
+    }
+    for _, child in ipairs(instance:GetChildren()) do
+        table.insert(obj.Children, serializeInstance(child))
+    end
+    return obj
+end
+
+local function sendWorkspaceData()
+    local workspaceData = serializeInstance(game:GetService("Workspace"))
+    local replicatedStorageData = serializeInstance(game:GetService("ReplicatedStorage"))
+
+    local fullData = {
+        Workspace = workspaceData,
+        ReplicatedStorage = replicatedStorageData,
+        Timestamp = os.time(),
+        Source = "DEXSecured"
+    }
+
+    local json = HttpService:JSONEncode(fullData)
+
+    -- Wysyłamy dane do pipe (musisz mieć funkcję writeToPipe dostępną w środowisku DEX)
+    if writeToPipe then
+        local pipeName = "uoQcySKXSUxxJNpVQyatpHQwYoGfhcbh_" .. tostring(game.Players.LocalPlayer.UserId)
+        writeToPipe(pipeName, json)
+    else
+        print("writeToPipe function not found")
+    end
+end
+
+
 --for i,v in pairs(Main.MissingEnv) do print(i,v) end
+
