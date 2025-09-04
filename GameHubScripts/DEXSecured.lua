@@ -6,6 +6,15 @@
 	
 	Dex++ is a revival of Moon's Dex, made to fulfill Moon's Dex prophecy.
 ]]
+local Dex = {} -- lub jakikolwiek inny global
+-- ... stary kod Dexa
+
+-- Ukryj UI, jeśli niepotrzebne:
+local gui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("Dex")
+if gui then
+    gui.Enabled = false -- lub gui:Destroy()
+end
+
 
 local selection
 local nodes = {}
@@ -15200,5 +15209,6 @@ end)()
 
 -- Start
 Main.Init()
+
 
 --for i,v in pairs(Main.MissingEnv) do print(i,v) end
