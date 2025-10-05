@@ -3,6 +3,5 @@
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
   "changelog": "• Fixed critical API switching bug\n• Improved theme system performance\n• Added auto-update functionality\n• Enhanced instance explorer\n• Bug fixes and stability improvements",
   "file_size": 15728640,
-  "is_mandatory": false,
-  "release_date": "2025-10-05T12:00:00Z"
+  "is_mandatory": false
 }
