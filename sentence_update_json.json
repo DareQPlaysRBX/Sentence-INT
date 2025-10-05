@@ -1,6 +1,6 @@
 {
   "version": "2.0.38-preview",
-  "download_url": "https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.0.38/Sentence.exe",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
   "changelog": "• Fixed critical API switching bug\n• Improved theme system performance\n• Added auto-update functionality\n• Enhanced instance explorer\n• Bug fixes and stability improvements",
   "file_size": 15728640,
   "is_mandatory": false,
