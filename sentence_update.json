@@ -1,7 +1,8 @@
 {
-  "version": "2.0.38-preview",
+  "version": "2.0.39-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Fixed critical API switching bug\n• Improved theme system performance\n• Added auto-update functionality\n• Enhanced instance explorer\n• Bug fixes and stability improvements",
+  "changelog": "• Fixed bugs\n• Added features\n• Improved performance",
   "file_size": 15728640,
-  "is_mandatory": false
+  "is_mandatory": false,
+  "sha256_hash": "opcjonalnie_hash"
 }
