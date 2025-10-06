@@ -1,8 +1,8 @@
 {
   "version": "2.0.40-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Fixed some existed bugs\n• Added new AutoUpdater for UI\n• Improved Performance and Stability",
+  "changelog": "• Added and Replaced 4 new Themes\n• Fixed some known bugs\n• Improved Performance and Stability",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "FFBB783AACA94FC4AF9D159FE264B024E5182D29FE355D8BC400C286448D3FFF"
+  "sha256_hash": "882B99A7FCDD616BCD2B8DCE51F18CF5F7D6C4B1808EC5E91018463AF780C875"
 }
