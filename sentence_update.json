@@ -1,8 +1,8 @@
 {
-  "version": "2.0.43-preview",
+  "version": "2.0.45-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added new Auto-Attach option (BETA)\n• Updated Crimson Princess Theme\n• Reduced file size with code optimization\n• Reduced amount of showing notifications",
+  "changelog": "• Fixed Stability Issues in main UI\n• Rewrited Attachment Class\n• Rewrited Execution Class\n• Even more reduced notifications",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "62230AD3C8D36218645A801BF044C12ECB271722581623A7D2ADE62F548D5177"
+  "sha256_hash": "A854F450F8C163885386A1CBFCB1AB957350AE6C92C98A52370FBE99C1EBE555"
 }
