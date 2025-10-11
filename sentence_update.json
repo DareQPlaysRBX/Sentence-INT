@@ -1,8 +1,8 @@
 {
-  "version": "2.0.46-preview",
+  "version": "2.0.48-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Updated VelAPI SetWorkspace method (may be more stable than last one)\n• Added 'Auto Execute' (BETA, uses JobId Tracking for testing phase)\n• Maded some compatibility fixes\n• Other small fixes and improvements",
+  "changelog": "• Updated Attachment Methods - Reduced injection time, improved stability\n• Updated Execution Methods\n• Maded other small fixes and UI changes",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "6EFE0B8994730153A3C8F0754C42A48572159392EF2F87DD58FAB5516CD42FB7"
+  "sha256_hash": "EE25E1797FD106FF349903FFB3A40419697133682AA0E783992ABF7110434A5F"
 }
