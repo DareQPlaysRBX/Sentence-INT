@@ -4,5 +4,8 @@
   "changelog": "• Updated Attachment Methods - Reduced injection time, improved stability\n• Updated Execution Methods\n• Maded other small fixes and UI changes",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "EE25E1797FD106FF349903FFB3A40419697133682AA0E783992ABF7110434A5F"
+  "sha256_hash": "EE25E1797FD106FF349903FFB3A40419697133682AA0E783992ABF7110434A5F",
+  "xeno_version": "1.5.2",
+  "xeno_download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
+  "xeno_sha256_hash": "403B4BB000B353538FFF96301A8ECA08D62887C69558CECB4762B583425A039B"
 }
