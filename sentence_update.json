@@ -1,7 +1,7 @@
 {
   "version": "2.0.50-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added Script Hub (Pre-Released), this update requires to use SEInstaller for proper install!\n• Maded some optimization fixes\n• Fixed status validation",
+  "changelog": "• Added Script Hub (Pre-Released), this update requires to use SEInstaller for proper install!\n• Fixed status, auto attach and auto execute validation.\n• Maded small UI changes.\n• Maded some optimization fixes.",
   "file_size": 15728640,
   "is_mandatory": false,
   "sha256_hash": "6E307A2EB066710DC27744A873B0CD44B1E6F2351A9E306EE464761BF851A6F5",
