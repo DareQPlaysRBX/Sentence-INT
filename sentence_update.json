@@ -1,11 +1,16 @@
 {
-  "version": "2.0.485-preview",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Fixed UI stability issues while opening or injecting SENTENCE\n• Optimized XenoAPI and VelAPI status monitoring\n• Fixed decompiler crashing on startup",
+  "version": "2.0.485",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
+  "changelog": "- AutoUpdater now updating all Sentence files excluding logs, theme configs and tabs sessions, scripts.\n- This update requires use SEInstaller to update Sentence\n- Some performance improvements been made too",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "AC1D72E2141FA9ADE79646CEB89F60493F7F648A3C4CB20506D2D7D805FF53CA",
-  "xeno_version": "1.1.75",
-  "xeno_download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
-  "xeno_sha256_hash": "403B4BB000B353538FFF96301A8ECA08D62887C69558CECB4762B583425A039B"
+  "sha256_hash": "abc123...",
+  "exclude_files": [
+    "tabs_sessions.json",
+    "theme_config.json"
+  ],
+  "exclude_directories": [
+    "logs",
+    "scripts"
+  ]
 }
