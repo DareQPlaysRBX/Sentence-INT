@@ -4,8 +4,5 @@
   "changelog": "• Changed embed for Script Hub Panel\n• Added new option 'Custom Theme Editor' in Theme Settings\n• Maded minor changes for blur animations.\n• Maded minor UI changes in Settings Panel",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "3CEAF7827F4B9DD98673648D247EA6F69A30181EFBFD176D6A2C4DBB2EE2A8F8",
-  "xeno_version": "1.1.80",
-  "xeno_download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
-  "xeno_sha256_hash": "DC2D63528969D172570529A135574CA0A8F8AAEECB5043D23207230BFE072C6B"
+  "sha256_hash": "3CEAF7827F4B9DD98673648D247EA6F69A30181EFBFD176D6A2C4DBB2EE2A8F8"
 }
