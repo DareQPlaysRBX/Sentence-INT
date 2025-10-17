@@ -5,7 +5,7 @@
   "file_size": 15728640,
   "is_mandatory": false,
   "sha256_hash": "3CEAF7827F4B9DD98673648D247EA6F69A30181EFBFD176D6A2C4DBB2EE2A8F8",
-  "xeno_version": "1.1.75",
+  "xeno_version": "1.1.80",
   "xeno_download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
-  "xeno_sha256_hash": "403B4BB000B353538FFF96301A8ECA08D62887C69558CECB4762B583425A039B"
+  "xeno_sha256_hash": "DC2D63528969D172570529A135574CA0A8F8AAEECB5043D23207230BFE072C6B"
 }
