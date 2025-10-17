@@ -1,8 +1,8 @@
 {
-  "version": "2.0.51-preview",
+  "version": "2.0.52-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Changed embed for Script Hub Panel\n• Added new option 'Custom Theme Editor' in Theme Settings\n• Maded minor changes for blur animations.\n• Maded minor UI changes in Settings Panel",
+  "changelog": "• Added Auto Updater for XenoAPI\n • Fixed some bugs",
   "file_size": 15728640,
   "is_mandatory": false,
-  "sha256_hash": "3CEAF7827F4B9DD98673648D247EA6F69A30181EFBFD176D6A2C4DBB2EE2A8F8"
+  "sha256_hash": "1C5F84C23FF5CACFB6EA19E2E7A47F440F80DDEE809CF4797959480379D0C346"
 }
