@@ -1,10 +1,10 @@
 {
-  "version": "v1.2.90",
+  "version": "v1.3.0a",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
-  "changelog": "- Updated to the latest version",
+  "changelog": "- Updated to the latest version v1.3.0a",
   "file_size": 2048000,
   "is_mandatory": false,
-  "sha256_hash": "C5EC3B59EF49C0C5DE3DBC5B83EEC61A2A58423A896AD40AE1E961AA6E049562",
+  "sha256_hash": "F3BCCAE236ED5452444A7326FE6582F049CBF84298B851CD6A3FF17E01229D66",
   "release_date": "2025-01-15T10:00:00Z",
   "minimum_app_version": "2.0.51-preview"
 }
