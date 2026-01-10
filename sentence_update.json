@@ -1,6 +1,6 @@
 {
   "version": "2.0.54-preview",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
+  "download_url": "https://gitlab.com/DareQPlaysRBX/Sentence-INT/-/raw/main/SentenceRBX.dll",
   "changelog": "• Updated download addresses for VelocityAPI.\n • Added a 3s cooldown to fully update Xeno after downloading.\n • Fixed some bugs with replacing files after installation.",
   "file_size": 6282752,
   "is_mandatory": false,
