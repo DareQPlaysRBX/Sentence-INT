@@ -1,8 +1,8 @@
 {
-  "version": "2.0.52-preview",
+  "version": "2.0.54-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added Auto Updater for XenoAPI\n • Fixed some bugs",
-  "file_size": 15728640,
+  "changelog": "• Updated download addresses for VelocityAPI\n • Added a 3s cooldown to fully update Xeno after downloading\n • Fixed some bugs with replacing files after installation new update.",
+  "file_size": 6282752,
   "is_mandatory": false,
-  "sha256_hash": "1C5F84C23FF5CACFB6EA19E2E7A47F440F80DDEE809CF4797959480379D0C346"
+  "sha256_hash": "16C892A1060B326183C28ABE5CB277F5F40E7152D5FDCDC8C335928643A714AE"
 }
