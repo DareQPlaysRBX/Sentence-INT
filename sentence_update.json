@@ -4,5 +4,5 @@
   "changelog": "• Updated download addresses for VelocityAPI.\n • Added a 3s cooldown to fully update Xeno after downloading.\n • Fixed some bugs with replacing files after installation.",
   "file_size": 6282752,
   "is_mandatory": false,
-  "sha256_hash": "16C892A1060B326183C28ABE5CB277F5F40E7152D5FDCDC8C335928643A714AE"
+  "sha256_hash": "327B77AB97C6EEA796229E29E0E0464D48BF7C47455266B1EC7ACEF566CE809A"
 }
