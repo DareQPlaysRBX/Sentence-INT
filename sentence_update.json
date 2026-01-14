@@ -1,7 +1,7 @@
 {
   "version": "2.0.56-preview",
   "download_url": "https://gitlab.com/DareQPlaysRBX/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• We maded some minor visual changes on ScriptHub page.\n • Smoothfactor for smooth scrolling got updated to 1.25 in settings panel.\n • Maded some minor optimization fixes in general.",
+  "changelog": "• We maded some minor visual changes on ScriptHub page.\n • Smoothfactor for smooth scrolling got updated to 1.25 in settings panel.\n • Maded some minor optimization fixes in general.\n • ScriptList is now auto expanded for default values.",
   "file_size": 6289408,
   "is_mandatory": false,
   "sha256_hash": "90E51A11239ED6DD4ACD293E2C2A91DE872FC746BA26A1BB2D82233A619FB652"
