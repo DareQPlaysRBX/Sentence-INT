@@ -1,8 +1,8 @@
 {
-  "version": "2.0.56-preview",
+  "version": "2.0.60-preview",
   "download_url": "https://gitlab.com/DareQPlaysRBX/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• We maded some minor visual changes on ScriptHub page.\n • Smoothfactor for smooth scrolling got updated to 1.25 in settings panel.\n • Maded some minor optimization fixes in general.\n • ScriptList is now auto expanded for default values.",
-  "file_size": 6289408,
+  "changelog": "• Our whole OG Sentence UI/Theme got redesigned.\n • Main Page: Added new panel AutoExec. You can now drag and drop scripts for Auto Execute and remove them via right click.\n • Script Hub: This panel is now much more compact and better optimized, organized + category filters got fixed. (some types has been unable to find)\n • Script List: Choosing script from Scripts now opens file in new tab.\n • Tabs: Refreshing deactivated tabs are now much more simple and stable.\n • Themes: Color pallete for all themes got updated.\n • We also maded minor optimization fixes and that's all 😘",
+  "file_size": 6310400,
   "is_mandatory": false,
-  "sha256_hash": "90E51A11239ED6DD4ACD293E2C2A91DE872FC746BA26A1BB2D82233A619FB652"
+  "sha256_hash": "805ACC3ACB68F9A39CC54B46F26573329B919033E2CFF6E6C82CEB067D80B924"
 }
