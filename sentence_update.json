@@ -1,7 +1,7 @@
 {
   "version": "2.0.60-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Our whole OG Sentence UI/Theme got redesigned.\n • Main Page: Added new panel AutoExec. You can now drag and drop scripts for Auto Execute and remove them via right click.\n • Script Hub: This panel is now much more compact and better optimized, organized + category filters got fixed. (some types has been unable to find)\n • Script List: Choosing script from Scripts now opens file in new tab.\n • Tabs: Refreshing deactivated tabs are now much more simple and stable.\n • Themes: Color pallete for all themes got updated.\n • We also maded minor optimization fixes and that's all 😘",
+  "changelog": "• Our whole OG Sentence UI/Theme got redesigned.\n • Main Page: Added new panel AutoExec. You can now drag and drop scripts for Auto Execute and remove them via right click.\n • Script Hub: This panel is now much more compact and better optimized, organized + category filters got fixed. (some types has been unable to find)\n • Script List: Choosing script from Scripts now opens file in new tab.\n • Tabs: Refreshing deactivated tabs are now much more simple and stable.\n • Themes: Color pallete for all themes got updated.\n • All update addresses got changed and we fixed security check also maded minor optimization fixes and that's all 😘",
   "file_size": 6289408,
   "is_mandatory": false,
   "commit_sha": "ff801f40a7bcf5ba36343345b33be29e92c63f1e",
