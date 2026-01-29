@@ -4,7 +4,7 @@
   "changelog": "• Maded some Performance improvements for the latest 2.0.60 version in this one.\n• Added new language selection: English & Polish for now.\n• Maded minor Script Hub visual improvements.\n• Maded some small stability fixes.",
   "file_size": 6430720,
   "is_mandatory": false,
-  "commit_sha": "2eb08437562b49cd8e536b4bf10def6716172fb2",
+  "commit_sha": "0f2f213b6b9e9e588426f5b05784bb50486462bc",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
