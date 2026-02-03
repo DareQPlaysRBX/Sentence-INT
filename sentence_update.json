@@ -1,10 +1,10 @@
 {
-  "version": "2.0.62-preview",
+  "version": "2.0.63-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Maded some minor visual improvments in Main Layout Page.\n• Added new Auto Recover function for deleted modules by antivirus, sentence will download them back on application start.\n• Maded small performance improvements and stability fixes for Attachment Manager.\n• Maded some visual changes in Software Update Check Window.\n• Turning off Gradient Animations for App Title can drasticly reduce ur CPU/GPU usage, just to reminder.\n• Updated main Editor Theme, now is much more customized to OG Sentence Theme.",
-  "file_size": 6463488,
+  "changelog": "• Maded some minor visual improvments in Main Layout Page.\n• Updated Attachment method for Xeno Wrapper.\n• Fixed an issue where creating and switching tabs could spawn endless editor processes, consuming excessive RAM. The editor is now structured on a lightweight skeleton framework.\n• Maded minor performance and stability improvements.",
+  "file_size": 6459392,
   "is_mandatory": false,
-  "commit_sha": "1d20a5f77be4b585528e2b7aedfe722eff932822",
+  "commit_sha": "0e5e4a0bd625c3b145a9903f69f4319962a52315",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
