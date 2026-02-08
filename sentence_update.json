@@ -4,7 +4,7 @@
   "changelog": "• Fixed color pallete for Editor Page Layout.\n• Maded minor visual improvements in Text Editor. (Use SEInstaller to FULLY Update it) .\n• Updated main Text Editor Theme for OG Sentence.\n• Maded some performance optimizations in overall.",
   "file_size": 6262784,
   "is_mandatory": false,
-  "commit_sha": "26966e0a96942ecd7c2995504819ceb0070e9e45",
+  "commit_sha": "5d3f3e1a6ab3fa199f2af482b793e9dc583985f1",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
