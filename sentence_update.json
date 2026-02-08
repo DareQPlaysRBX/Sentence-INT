@@ -2,7 +2,7 @@
   "version": "2.0.64-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
   "changelog": "• Fixed color pallete for Editor Page Layout.\n• Maded minor visual improvements in Text Editor. (Use SEInstaller to FULLY Update it) .\n• Updated main Text Editor Theme for OG Sentence.\n• Maded some performance optimizations in overall.",
-  "file_size": 6459392,
+  "file_size": 6262784,
   "is_mandatory": false,
   "commit_sha": "26966e0a96942ecd7c2995504819ceb0070e9e45",
   "gitlab_project": "dareqplays/Sentence-INT",
