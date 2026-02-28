@@ -1,10 +1,10 @@
 {
-  "version": "2.0.65-preview",
+  "version": "2.0.66-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Updated Main Layout with some UI changes.\n• You can now Hide/Show console via button.\n• Redesigned whole Theme Editor Window, addded more customizable options.\n• Maded some performance optimizations in overall and that's all. Have fun :)",
+  "changelog": "• Fixed the error appearing while clicking any key on keyboard in Main Page.\n• Maded some minor optimization fixes for Instance Explorer Handler.\n• Maded some performance optimizations in overall and that's all. Have fun :)",
   "file_size": 7516160,
   "is_mandatory": false,
-  "commit_sha": "97f111fa0255b0cba80871d3bc1d5a4dff018146",
+  "commit_sha": "dbcc662ea7f5fca45bf0649019d7ac200955dc9f",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
