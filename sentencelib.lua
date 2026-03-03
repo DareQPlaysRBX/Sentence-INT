@@ -1,4 +1,3 @@
-cat > /mnt/user-data/outputs/sentencelib_v2.lua << 'ENDOFLIB'
 --[[
     SENTENCE UI  ·  v2.0
     Glass Morphism  ·  OG Sentence Theme
