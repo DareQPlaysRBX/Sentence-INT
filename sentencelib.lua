@@ -1,6 +1,8 @@
+cat > /mnt/user-data/outputs/sentencelib_v2.lua << 'ENDOFLIB'
 --[[
     SENTENCE UI  ·  v2.0
     Glass Morphism  ·  OG Sentence Theme
+    – No shadow, no subtabs –
 ]]
 
 -- ── Services & aliases ────────────────────────────────────────────────────────
@@ -10,7 +12,6 @@ local players  = game:GetService("Players")
 local http     = game:GetService("HttpService")
 local gui_svc  = game:GetService("GuiService")
 local coregui  = game:GetService("CoreGui")
-local run      = game:GetService("RunService")
 
 local v2, ud2, ud = Vector2.new, UDim2.new, UDim.new
 local ud2o = UDim2.fromOffset
@@ -20,27 +21,27 @@ local nseq, nkey = NumberSequence.new, NumberSequenceKeypoint.new
 local floor, clamp, max = math.floor, math.clamp, math.max
 local insert, find, remove, concat = table.insert, table.find, table.remove, table.concat
 
-local lp     = players.LocalPlayer
-local mouse  = lp:GetMouse()
-local camera = workspace.CurrentCamera
+local lp         = players.LocalPlayer
+local mouse      = lp:GetMouse()
+local camera     = workspace.CurrentCamera
 local gui_offset = gui_svc:GetGuiInset().Y
 
 -- ── Theme ─────────────────────────────────────────────────────────────────────
 local T = {
-    bg0     = hex"121212",  bg1    = hex"161616",  bg2  = hex"1a1a1a",
-    glass   = hex"0d0d0f",  border = hex"252525",  bord2 = hex"2d2d2d",
-    accent  = hex"5A9FE8",  acc_lo = hex"4580C9",  acc_hi = hex"7BB5ED",
-    txt0    = hex"E8E8E8",  txt1   = hex"909090",  txt2 = hex"505050",
-    white   = hex"FFFFFF",  notif  = hex"202020",
-    btn     = hex"1f1f1f",  btnH   = hex"252525",  btnP = hex"161616",
+    bg0=hex"121212", bg1=hex"161616", bg2=hex"1a1a1a",
+    glass=hex"0d0d0f", border=hex"252525", bord2=hex"2d2d2d",
+    accent=hex"5A9FE8", acc_lo=hex"4580C9", acc_hi=hex"7BB5ED",
+    txt0=hex"E8E8E8", txt1=hex"909090", txt2=hex"505050",
+    white=hex"FFFFFF", notif=hex"202020",
+    btn=hex"1f1f1f", btnH=hex"252525", btnP=hex"161616",
 }
 
--- ── Animation helpers ─────────────────────────────────────────────────────────
+-- ── Animation ─────────────────────────────────────────────────────────────────
 local A = {
     fast=.12, normal=.22, spring=.45,
-    out  = Enum.EasingStyle.Quint,  quad = Enum.EasingStyle.Quad,
-    back = Enum.EasingStyle.Back,   lin  = Enum.EasingStyle.Linear,
-    dout = Enum.EasingDirection.Out,
+    out=Enum.EasingStyle.Quint, quad=Enum.EasingStyle.Quad,
+    back=Enum.EasingStyle.Back, lin=Enum.EasingStyle.Linear,
+    dout=Enum.EasingDirection.Out,
 }
 
 -- ── Key labels ────────────────────────────────────────────────────────────────
@@ -59,7 +60,7 @@ local KEYMAP = {
 }
 
 -- ═════════════════════════════════════════════════════════════════════════════
---  LIBRARY
+--  LIBRARY INIT
 -- ═════════════════════════════════════════════════════════════════════════════
 getgenv().sentence = {
     directory="sentence", folders={"/configs","/themes"},
@@ -88,9 +89,9 @@ local fonts = {}; do
     local reg = load("SN_R.ttf",400,"Normal",BASE.."Inter_28pt-Medium.ttf")
     local med = load("SN_M.ttf",500,"Normal",BASE.."Inter_28pt-Medium.ttf")
     local sb  = load("SN_S.ttf",600,"Normal",BASE.."Inter_28pt-SemiBold.ttf")
-    fonts.sm  = Font.new(reg,Enum.FontWeight.Regular,Enum.FontStyle.Normal)
-    fonts.body= Font.new(med,Enum.FontWeight.Regular,Enum.FontStyle.Normal)
-    fonts.lbl = Font.new(sb, Enum.FontWeight.Regular,Enum.FontStyle.Normal)
+    fonts.sm   = Font.new(reg,Enum.FontWeight.Regular,Enum.FontStyle.Normal)
+    fonts.body = Font.new(med,Enum.FontWeight.Regular,Enum.FontStyle.Normal)
+    fonts.lbl  = Font.new(sb, Enum.FontWeight.Regular,Enum.FontStyle.Normal)
 end
 
 -- ── Core utils ────────────────────────────────────────────────────────────────
@@ -151,7 +152,6 @@ function lib:drag(frame,handle)
     end)
 end
 
--- ── Shimmer helper ────────────────────────────────────────────────────────────
 local function shimmer(parent,z)
     local s=lib:mk("Frame",{
         Parent=parent,Size=ud2(.65,0,0,1),Position=ud2(.175,0,0,0),
@@ -205,21 +205,11 @@ function lib:window(p)
     lib.overlay=lib:mk("ScreenGui",{Parent=coregui,Enabled=true,
         ZIndexBehavior=Enum.ZIndexBehavior.Global,IgnoreGuiInset=true,ResetOnSpawn=false})
 
-    -- Shadow
-    lib:mk("ImageLabel",{
-        Parent=lib.items,
-        Size=ud2(cfg.size.X.Scale,cfg.size.X.Offset+80,cfg.size.Y.Scale,cfg.size.Y.Offset+80),
-        AnchorPoint=v2(.5,.5),Position=ud2(.5,0,.5,0),BackgroundTransparency=1,
-        Image="rbxassetid://112971167999062",ImageColor3=hex"000000",ImageTransparency=.5,
-        ScaleType=Enum.ScaleType.Slice,SliceCenter=Rect.new(v2(100,100),v2(156,156)),
-        SliceScale=.8,ZIndex=-10,BorderSizePixel=0,
-    })
-
-    -- Main frame
+    -- Main frame (no shadow)
     local main=lib:mk("Frame",{
-        Parent=lib.items,Size=cfg.size,
+        Parent=lib.items, Size=cfg.size,
         Position=ud2(.5,-cfg.size.X.Offset/2,.5,-cfg.size.Y.Offset/2),
-        BackgroundColor3=T.bg0,BackgroundTransparency=.08,BorderSizePixel=0,
+        BackgroundColor3=T.bg0, BackgroundTransparency=.08, BorderSizePixel=0,
     })
     lib:mk("UICorner",{Parent=main,CornerRadius=ud(0,12)})
     lib:mk("UIStroke",{Parent=main,Color=T.border,ApplyStrokeMode=Enum.ApplyStrokeMode.Border,Thickness=1})
@@ -233,13 +223,12 @@ function lib:window(p)
         BackgroundTransparency=.1,BorderSizePixel=0,ZIndex=2,
     })
     lib:mk("UICorner",{Parent=sidebar,CornerRadius=ud(0,12)})
-    -- right-edge fill
     lib:mk("Frame",{Parent=sidebar,Size=ud2(0,12,1,0),Position=ud2(1,-12,0,0),
         BackgroundColor3=T.bg1,BackgroundTransparency=.1,BorderSizePixel=0,ZIndex=1})
     lib:mk("Frame",{Parent=sidebar,Size=ud2(0,1,1,0),Position=ud2(1,-1,0,0),
         BackgroundColor3=T.border,BackgroundTransparency=.3,BorderSizePixel=0,ZIndex=3})
 
-    -- Logo area
+    -- Logo
     local logo=lib:mk("Frame",{Parent=sidebar,Size=ud2(1,0,0,68),BackgroundTransparency=1,ZIndex=3})
     local bar=lib:mk("Frame",{Parent=logo,Size=ud2(0,3,0,28),Position=ud2(0,13,.5,-14),
         BackgroundColor3=T.accent,BorderSizePixel=0,ZIndex=4})
@@ -253,7 +242,7 @@ function lib:window(p)
     lib:mk("Frame",{Parent=logo,Size=ud2(1,-26,0,1),Position=ud2(0,13,1,-1),
         BackgroundColor3=T.border,BackgroundTransparency=.4,BorderSizePixel=0,ZIndex=3})
 
-    -- Tab button list
+    -- Tab button holder
     local btn_holder=lib:mk("Frame",{
         Parent=sidebar,Size=ud2(1,0,1,-68),Position=ud2(0,0,0,68),
         BackgroundTransparency=1,BorderSizePixel=0,ZIndex=3,
@@ -263,22 +252,18 @@ function lib:window(p)
         PaddingRight=ud(0,8),PaddingBottom=ud(0,8)})
     cfg.items.btn_holder=btn_holder
 
-    -- Content & multi-tab bar
-    local content=lib:mk("Frame",{Parent=main,Size=ud2(1,-186,1,-50),Position=ud2(0,186,0,46),
-        BackgroundTransparency=1,BorderSizePixel=0,ZIndex=2})
+    -- Content area (full height, no multi-bar gap)
+    local content=lib:mk("Frame",{
+        Parent=main,Size=ud2(1,-186,1,-16),Position=ud2(0,186,0,8),
+        BackgroundTransparency=1,BorderSizePixel=0,ZIndex=2
+    })
     cfg.items.content_area=content
 
-    local multi_bar=lib:mk("Frame",{Parent=main,Size=ud2(1,-186,0,46),Position=ud2(0,186,0,0),
-        BackgroundTransparency=1,BorderSizePixel=0,ZIndex=4})
-    lib:mk("Frame",{Parent=multi_bar,Size=ud2(1,0,0,1),Position=ud2(0,0,1,-1),
-        BackgroundColor3=T.border,BackgroundTransparency=.4,BorderSizePixel=0,ZIndex=4})
-    lib:mk("UIListLayout",{Parent=multi_bar,Padding=ud(0,2),FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder})
-    lib:mk("UIPadding",{Parent=multi_bar,PaddingLeft=ud(0,12),PaddingTop=ud(0,8)})
-    cfg.items.multi_bar=multi_bar
-
     -- Fade overlay
-    local fade=lib:mk("Frame",{Parent=main,Size=ud2(1,-186,1,-50),Position=ud2(0,186,0,46),
-        BackgroundColor3=T.bg0,BackgroundTransparency=1,BorderSizePixel=0,ZIndex=10})
+    local fade=lib:mk("Frame",{
+        Parent=main,Size=ud2(1,-186,1,-16),Position=ud2(0,186,0,8),
+        BackgroundColor3=T.bg0,BackgroundTransparency=1,BorderSizePixel=0,ZIndex=10
+    })
     cfg.items.fade_overlay=fade
 
     -- Bottom bar
@@ -291,8 +276,9 @@ function lib:window(p)
         BackgroundTransparency=1,FontFace=fonts.sm,Text=cfg.info,
         TextColor3=T.txt2,TextSize=11,TextXAlignment=Enum.TextXAlignment.Left,ZIndex=4})
 
-    -- Drag & entrance
     lib:drag(main,logo)
+
+    -- Entrance animation
     main.BackgroundTransparency=1
     main.Size=ud2(cfg.size.X.Scale,cfg.size.X.Offset-22,cfg.size.Y.Scale,cfg.size.Y.Offset-22)
     task.spawn(function()
@@ -318,158 +304,116 @@ function lib:window(p)
 end
 
 -- ═════════════════════════════════════════════════════════════════════════════
---  TAB
+--  TAB  (no subtabs — content goes directly into tab frame)
 -- ═════════════════════════════════════════════════════════════════════════════
 function lib:tab(p)
-    local cfg={name=p.name or "Tab",icon=p.icon or "rbxassetid://6034767608",
-        tabs=p.tabs or{"Main"},pages={},current_multi=nil,items={}}
+    local cfg={
+        name=p.name or "Tab", icon=p.icon or "rbxassetid://6034767608",
+        items={}, open=false,
+    }
     local items=cfg.items
 
-    items.tab_holder=lib:mk("Frame",{Parent=lib.cache,Size=ud2(1,-16,1,-16),
-        Position=ud2(0,8,0,8),BackgroundTransparency=1,BorderSizePixel=0,Visible=false})
-    items.multi_buttons=lib:mk("Frame",{Parent=lib.cache,Size=ud2(1,0,1,0),
-        BackgroundTransparency=1,BorderSizePixel=0,Visible=false})
-    lib:mk("UIListLayout",{Parent=items.multi_buttons,FillDirection=Enum.FillDirection.Horizontal,
-        Padding=ud(0,3),SortOrder=Enum.SortOrder.LayoutOrder})
+    -- Content holder (lives in cache until opened)
+    items.holder=lib:mk("Frame",{
+        Parent=lib.cache,
+        Size=ud2(1,0,1,0),
+        BackgroundTransparency=1,BorderSizePixel=0,Visible=false,
+    })
+    lib:mk("UIListLayout",{
+        Parent=items.holder,
+        FillDirection=Enum.FillDirection.Horizontal,
+        HorizontalFlex=Enum.UIFlexAlignment.Fill,
+        VerticalFlex=Enum.UIFlexAlignment.Fill,
+        Padding=ud(0,7),SortOrder=Enum.SortOrder.LayoutOrder,
+    })
+    lib:mk("UIPadding",{
+        Parent=items.holder,
+        PaddingTop=ud(0,7),PaddingBottom=ud(0,7),
+        PaddingLeft=ud(0,7),PaddingRight=ud(0,7),
+    })
 
     -- Sidebar button
-    items.button=lib:mk("TextButton",{Parent=self.items.btn_holder,Size=ud2(1,0,0,32),
-        BackgroundColor3=T.btn,BackgroundTransparency=1,BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=4})
+    items.button=lib:mk("TextButton",{
+        Parent=self.items.btn_holder,Size=ud2(1,0,0,32),
+        BackgroundColor3=T.btn,BackgroundTransparency=1,
+        BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=4,
+    })
     lib:mk("UICorner",{Parent=items.button,CornerRadius=ud(0,7)})
-    items.btn_accent=lib:mk("Frame",{Parent=items.button,Size=ud2(0,3,0,16),Position=ud2(0,0,.5,-8),
-        BackgroundColor3=T.accent,BackgroundTransparency=1,BorderSizePixel=0,ZIndex=5})
+
+    items.btn_accent=lib:mk("Frame",{
+        Parent=items.button,Size=ud2(0,3,0,16),Position=ud2(0,0,.5,-8),
+        BackgroundColor3=T.accent,BackgroundTransparency=1,BorderSizePixel=0,ZIndex=5,
+    })
     lib:mk("UICorner",{Parent=items.btn_accent,CornerRadius=ud(0,999)})
-    items.btn_icon=lib:mk("ImageLabel",{Parent=items.button,Size=ud2(0,16,0,16),Position=ud2(0,10,.5,-8),
-        BackgroundTransparency=1,Image=cfg.icon,ImageColor3=T.txt2,BorderSizePixel=0,ZIndex=5})
-    items.btn_label=lib:mk("TextLabel",{Parent=items.button,Size=ud2(1,-36,1,0),Position=ud2(0,32,0,0),
-        BackgroundTransparency=1,FontFace=fonts.body,Text=cfg.name,TextColor3=T.txt2,
-        TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0,ZIndex=5})
+
+    items.btn_icon=lib:mk("ImageLabel",{
+        Parent=items.button,Size=ud2(0,16,0,16),Position=ud2(0,10,.5,-8),
+        BackgroundTransparency=1,Image=cfg.icon,ImageColor3=T.txt2,BorderSizePixel=0,ZIndex=5,
+    })
+    items.btn_label=lib:mk("TextLabel",{
+        Parent=items.button,Size=ud2(1,-36,1,0),Position=ud2(0,32,0,0),
+        BackgroundTransparency=1,FontFace=fonts.body,Text=cfg.name,
+        TextColor3=T.txt2,TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,
+        BorderSizePixel=0,ZIndex=5,
+    })
 
     items.button.MouseEnter:Connect(function()
-        if self.selected_tab and self.selected_tab[1]==items.button then return end
+        if self.selected_tab==cfg then return end
         lib:tw(items.button,{BackgroundTransparency=.88},A.quad,A.fast)
         lib:tw(items.btn_icon,{ImageColor3=T.txt1},A.quad,A.fast)
         lib:tw(items.btn_label,{TextColor3=T.txt1},A.quad,A.fast)
     end)
     items.button.MouseLeave:Connect(function()
-        if self.selected_tab and self.selected_tab[1]==items.button then return end
+        if self.selected_tab==cfg then return end
         lib:tw(items.button,{BackgroundTransparency=1},A.quad,A.fast)
         lib:tw(items.btn_icon,{ImageColor3=T.txt2},A.quad,A.fast)
         lib:tw(items.btn_label,{TextColor3=T.txt2},A.quad,A.fast)
     end)
 
-    -- Multi-tab pages
-    for _,sname in cfg.tabs do
-        local pd={items={}}
-        pd.items.tab=lib:mk("Frame",{Parent=lib.cache,Size=ud2(1,0,1,0),
-            BackgroundTransparency=1,BorderSizePixel=0,Visible=false})
-        lib:mk("UIListLayout",{Parent=pd.items.tab,FillDirection=Enum.FillDirection.Horizontal,
-            HorizontalFlex=Enum.UIFlexAlignment.Fill,VerticalFlex=Enum.UIFlexAlignment.Fill,
-            Padding=ud(0,7),SortOrder=Enum.SortOrder.LayoutOrder})
-        lib:mk("UIPadding",{Parent=pd.items.tab,PaddingTop=ud(0,7),PaddingBottom=ud(0,7),
-            PaddingLeft=ud(0,7),PaddingRight=ud(0,7)})
-
-        pd.items.btn=lib:mk("TextButton",{Parent=items.multi_buttons,Size=ud2(0,0,1,-7),
-            AutomaticSize=Enum.AutomaticSize.X,BackgroundColor3=T.glass,BackgroundTransparency=1,
-            BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=5,ClipsDescendants=true})
-        lib:mk("UICorner",{Parent=pd.items.btn,CornerRadius=ud(0,5)})
-        pd.items.btn_label=lib:mk("TextLabel",{Parent=pd.items.btn,Size=ud2(1,-14,1,0),
-            Position=ud2(0,7,0,0),BackgroundTransparency=1,FontFace=fonts.body,Text=sname,
-            TextColor3=T.txt2,TextSize=12,BorderSizePixel=0,ZIndex=6,AutomaticSize=Enum.AutomaticSize.X})
-        pd.items.btn_line=lib:mk("Frame",{Parent=pd.items.btn,Size=ud2(.6,0,0,2),
-            Position=ud2(.2,0,1,-2),BackgroundColor3=T.accent,BackgroundTransparency=1,
-            BorderSizePixel=0,ZIndex=6})
-        lib:mk("UICorner",{Parent=pd.items.btn_line,CornerRadius=ud(0,999)})
-
-        pd.parent=setmetatable(pd,lib):sub_tab({}).items.tab_parent
-        pd.text=pd.items.btn_label; pd.accent=pd.items.btn_line
-        pd.button=pd.items.btn;     pd.page=pd.items.tab
-
-        function pd.open_page()
-            local prev=cfg.current_multi
-            if prev and prev~=pd then
-                self.items.fade_overlay.BackgroundTransparency=0
-                lib:tw(self.items.fade_overlay,{BackgroundTransparency=1},A.quad,.25)
-                lib:tw(prev.text,{TextColor3=T.txt2},A.quad,A.fast)
-                lib:tw(prev.accent,{BackgroundTransparency=1},A.quad,A.fast)
-                lib:tw(prev.button,{BackgroundTransparency=1},A.quad,A.fast)
-                prev.page.Parent=lib.cache; prev.page.Visible=false
-            end
-            lib:tw(pd.text,{TextColor3=T.txt0},A.quad,A.fast)
-            lib:tw(pd.accent,{BackgroundTransparency=0},A.quad,A.fast)
-            lib:tw(pd.button,{BackgroundColor3=T.glass,BackgroundTransparency=.5},A.quad,A.fast)
-            pd.page.Parent=items.tab_holder; pd.page.Visible=true
-            cfg.current_multi=pd; lib:close_el()
-        end
-
-        pd.items.btn.MouseButton1Down:Connect(pd.open_page)
-        pd.items.btn.MouseEnter:Connect(function()
-            if cfg.current_multi==pd then return end
-            lib:tw(pd.items.btn,{BackgroundColor3=T.glass,BackgroundTransparency=.75},A.quad,A.fast)
-            lib:tw(pd.text,{TextColor3=T.txt1},A.quad,A.fast)
-        end)
-        pd.items.btn.MouseLeave:Connect(function()
-            if cfg.current_multi==pd then return end
-            lib:tw(pd.items.btn,{BackgroundTransparency=1},A.quad,A.fast)
-            lib:tw(pd.text,{TextColor3=T.txt2},A.quad,A.fast)
-        end)
-        cfg.pages[#cfg.pages+1]=setmetatable(pd,lib)
-    end
-
-    cfg.pages[1].open_page()
-
     function cfg.open_tab()
         local prev=self.selected_tab
-        if prev then
-            if prev[4]~=items.tab_holder then
-                self.items.fade_overlay.BackgroundTransparency=0
-                lib:tw(self.items.fade_overlay,{BackgroundTransparency=1},A.quad,.25)
-            end
-            lib:tw(prev[1],{BackgroundTransparency=1,BackgroundColor3=T.btn},A.quad,A.fast)
-            lib:tw(prev[2],{BackgroundTransparency=1},A.quad,A.fast)
-            lib:tw(prev[3],{ImageColor3=T.txt2},A.quad,A.fast)
-            prev[4].Parent=lib.cache; prev[4].Visible=false
-            prev[5].Parent=lib.cache; prev[5].Visible=false
+        if prev and prev~=cfg then
+            self.items.fade_overlay.BackgroundTransparency=0
+            lib:tw(self.items.fade_overlay,{BackgroundTransparency=1},A.quad,.22)
+            lib:tw(prev.items.button,{BackgroundTransparency=1,BackgroundColor3=T.btn},A.quad,A.fast)
+            lib:tw(prev.items.btn_accent,{BackgroundTransparency=1},A.quad,A.fast)
+            lib:tw(prev.items.btn_icon,{ImageColor3=T.txt2},A.quad,A.fast)
+            lib:tw(prev.items.btn_label,{TextColor3=T.txt2},A.quad,A.fast)
+            prev.items.holder.Parent=lib.cache
+            prev.items.holder.Visible=false
         end
         lib:tw(items.button,{BackgroundColor3=T.glass,BackgroundTransparency=.5},A.quad,A.normal)
         lib:tw(items.btn_accent,{BackgroundTransparency=0},A.quad,A.normal)
         lib:tw(items.btn_icon,{ImageColor3=T.accent},A.quad,A.normal)
         lib:tw(items.btn_label,{TextColor3=T.txt0},A.quad,A.normal)
-        items.tab_holder.Parent=self.items.content_area; items.tab_holder.Visible=true
-        items.multi_buttons.Parent=self.items.multi_bar; items.multi_buttons.Visible=true
-        self.selected_tab={items.button,items.btn_accent,items.btn_icon,
-            items.tab_holder,items.multi_buttons,items.btn_label}
+        items.holder.Parent=self.items.content_area
+        items.holder.Visible=true
+        self.selected_tab=cfg
         lib:close_el()
     end
 
     items.button.MouseButton1Down:Connect(cfg.open_tab)
     if not self.selected_tab then cfg.open_tab() end
-    return unpack(cfg.pages)
-end
 
--- ── Sub-tab & Column ──────────────────────────────────────────────────────────
-function lib:sub_tab(p)
-    local cfg={items={}}
-    cfg.items.tab_parent=lib:mk("Frame",{
-        Parent=self.items and self.items.tab or self.page,
-        Size=ud2(0,0,1,0),BackgroundTransparency=1,BorderSizePixel=0,
-    })
-    lib:mk("UIListLayout",{Parent=cfg.items.tab_parent,FillDirection=Enum.FillDirection.Horizontal,
-        HorizontalFlex=Enum.UIFlexAlignment.Fill,VerticalFlex=Enum.UIFlexAlignment.Fill,
-        Padding=ud(0,7),SortOrder=Enum.SortOrder.LayoutOrder})
-    return setmetatable(cfg,lib)
-end
-
-function lib:column(p)
-    local cfg={items={}}
-    cfg.items.column=lib:mk("Frame",{
-        Parent=self.parent or self.items.tab_parent,
-        Size=ud2(0,0,1,0),BackgroundTransparency=1,BorderSizePixel=0,
-    })
-    lib:mk("UIListLayout",{Parent=cfg.items.column,FillDirection=Enum.FillDirection.Vertical,
-        HorizontalFlex=Enum.UIFlexAlignment.Fill,Padding=ud(0,7),SortOrder=Enum.SortOrder.LayoutOrder})
-    lib:mk("UIPadding",{Parent=cfg.items.column,PaddingBottom=ud(0,7)})
-    return setmetatable(cfg,lib)
+    -- Return a page object that accepts :column()
+    local page={items={holder=items.holder}}
+    function page:column(props)
+        local col_cfg={items={}}
+        col_cfg.items.column=lib:mk("Frame",{
+            Parent=items.holder,
+            Size=ud2(0,0,1,0),
+            BackgroundTransparency=1,BorderSizePixel=0,
+        })
+        lib:mk("UIListLayout",{
+            Parent=col_cfg.items.column,
+            FillDirection=Enum.FillDirection.Vertical,
+            HorizontalFlex=Enum.UIFlexAlignment.Fill,
+            Padding=ud(0,7),SortOrder=Enum.SortOrder.LayoutOrder,
+        })
+        lib:mk("UIPadding",{Parent=col_cfg.items.column,PaddingBottom=ud(0,7)})
+        return setmetatable(col_cfg,lib)
+    end
+    return page
 end
 
 -- ═════════════════════════════════════════════════════════════════════════════
@@ -478,22 +422,26 @@ end
 function lib:section(p)
     local cfg={
         name=p.name or "Section",icon=p.icon or "rbxassetid://6022668898",
-        size=p.size or self.size or .5,fading=p.fading or false,
+        size=p.size or .5,fading=p.fading or false,
         default=p.default~=nil and p.default or (not p.fading),items={},
     }
     local items=cfg.items
 
-    items.card=lib:mk("Frame",{Parent=self.items.column,Size=ud2(0,0,cfg.size,-4),
-        BackgroundColor3=T.bg1,BackgroundTransparency=.12,BorderSizePixel=0})
+    items.card=lib:mk("Frame",{
+        Parent=self.items.column,Size=ud2(0,0,cfg.size,-4),
+        BackgroundColor3=T.bg1,BackgroundTransparency=.12,BorderSizePixel=0,
+    })
     lib:mk("UICorner",{Parent=items.card,CornerRadius=ud(0,9)})
     lib:mk("UIStroke",{Parent=items.card,Color=T.border,Transparency=.25,
         ApplyStrokeMode=Enum.ApplyStrokeMode.Border,Thickness=1})
     shimmer(items.card,2)
 
     -- Header
-    items.header=lib:mk("TextButton",{Parent=items.card,Size=ud2(1,0,0,34),
+    items.header=lib:mk("TextButton",{
+        Parent=items.card,Size=ud2(1,0,0,34),
         BackgroundColor3=T.bg2,BackgroundTransparency=.12,BorderSizePixel=0,
-        Text="",AutoButtonColor=false,ZIndex=3})
+        Text="",AutoButtonColor=false,ZIndex=3,
+    })
     lib:mk("UICorner",{Parent=items.header,CornerRadius=ud(0,9)})
     lib:mk("Frame",{Parent=items.header,Size=ud2(1,0,0,9),Position=ud2(0,0,1,-9),
         BackgroundColor3=T.bg2,BackgroundTransparency=.12,BorderSizePixel=0,ZIndex=2})
@@ -509,22 +457,26 @@ function lib:section(p)
     lib:mk("Frame",{Parent=items.card,Size=ud2(1,-14,0,1),Position=ud2(0,7,0,34),
         BackgroundColor3=T.border,BackgroundTransparency=.45,BorderSizePixel=0,ZIndex=3})
 
-    -- Scroll area
-    items.scroll=lib:mk("ScrollingFrame",{Parent=items.card,Size=ud2(1,0,1,-36),
-        Position=ud2(0,0,0,36),BackgroundTransparency=1,BorderSizePixel=0,
-        ScrollBarThickness=2,ScrollBarImageColor3=T.accent,
-        AutomaticCanvasSize=Enum.AutomaticSize.Y,CanvasSize=ud2(0,0,0,0),ZIndex=3})
-    items.elements=lib:mk("Frame",{Parent=items.scroll,Size=ud2(1,-18,0,0),
-        Position=ud2(0,9,0,9),BackgroundTransparency=1,BorderSizePixel=0,
-        AutomaticSize=Enum.AutomaticSize.Y,ZIndex=3})
+    -- Scroll/elements area
+    items.scroll=lib:mk("ScrollingFrame",{
+        Parent=items.card,Size=ud2(1,0,1,-36),Position=ud2(0,0,0,36),
+        BackgroundTransparency=1,BorderSizePixel=0,ScrollBarThickness=2,
+        ScrollBarImageColor3=T.accent,AutomaticCanvasSize=Enum.AutomaticSize.Y,
+        CanvasSize=ud2(0,0,0,0),ZIndex=3,
+    })
+    items.elements=lib:mk("Frame",{
+        Parent=items.scroll,Size=ud2(1,-18,0,0),Position=ud2(0,9,0,9),
+        BackgroundTransparency=1,BorderSizePixel=0,AutomaticSize=Enum.AutomaticSize.Y,ZIndex=3,
+    })
     lib:mk("UIListLayout",{Parent=items.elements,Padding=ud(0,8),SortOrder=Enum.SortOrder.LayoutOrder})
     lib:mk("UIPadding",{Parent=items.elements,PaddingBottom=ud(0,10)})
 
     -- Fading toggle
     if cfg.fading then
-        items.track=lib:mk("TextButton",{Parent=items.header,Size=ud2(0,30,0,15),
-            Position=ud2(1,-38,.5,-7.5),BackgroundColor3=T.bord2,BorderSizePixel=0,
-            Text="",AutoButtonColor=false,ZIndex=5})
+        items.track=lib:mk("TextButton",{
+            Parent=items.header,Size=ud2(0,30,0,15),Position=ud2(1,-38,.5,-7.5),
+            BackgroundColor3=T.bord2,BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=5,
+        })
         lib:mk("UICorner",{Parent=items.track,CornerRadius=ud(0,999)})
         items.thumb=lib:mk("Frame",{Parent=items.track,Size=ud2(0,10,0,10),
             Position=ud2(0,2,.5,-5),BackgroundColor3=T.txt2,BorderSizePixel=0,ZIndex=6})
@@ -564,34 +516,40 @@ function lib:toggle(p)
     flags[cfg.flag]=cfg.default
     local items=cfg.items
 
-    items.root=lib:mk("TextButton",{Parent=self.items.elements,
-        Size=ud2(1,0,0,0),AutomaticSize=Enum.AutomaticSize.Y,
-        BackgroundTransparency=1,BorderSizePixel=0,Text="",AutoButtonColor=false})
-    items.label=lib:mk("TextLabel",{Parent=items.root,Size=ud2(1,-46,0,0),
-        AutomaticSize=Enum.AutomaticSize.Y,BackgroundTransparency=1,FontFace=fonts.body,
-        Text=cfg.name,TextColor3=T.txt0,TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,
-        BorderSizePixel=0,ZIndex=3})
+    items.root=lib:mk("TextButton",{
+        Parent=self.items.elements,Size=ud2(1,0,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+        BackgroundTransparency=1,BorderSizePixel=0,Text="",AutoButtonColor=false,
+    })
+    items.label=lib:mk("TextLabel",{
+        Parent=items.root,Size=ud2(1,-46,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+        BackgroundTransparency=1,FontFace=fonts.body,Text=cfg.name,TextColor3=T.txt0,
+        TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0,ZIndex=3,
+    })
     lib:mk("UIPadding",{Parent=items.label,PaddingLeft=ud(0,2)})
     if cfg.info then
-        lib:mk("TextLabel",{Parent=items.root,Size=ud2(1,-8,0,0),Position=ud2(0,4,0,15),
+        lib:mk("TextLabel",{
+            Parent=items.root,Size=ud2(1,-8,0,0),Position=ud2(0,4,0,15),
             AutomaticSize=Enum.AutomaticSize.Y,BackgroundTransparency=1,FontFace=fonts.sm,
             Text=cfg.info,TextColor3=T.txt1,TextSize=11,TextXAlignment=Enum.TextXAlignment.Left,
-            TextWrapped=true,BorderSizePixel=0})
+            TextWrapped=true,BorderSizePixel=0,
+        })
     end
 
     if cfg.style=="switch" then
-        items.track=lib:mk("TextButton",{Parent=items.root,Size=ud2(0,32,0,17),
-            Position=ud2(1,-32,0,0),BackgroundColor3=T.bord2,BorderSizePixel=0,
-            Text="",AutoButtonColor=false,ZIndex=4})
+        items.track=lib:mk("TextButton",{
+            Parent=items.root,Size=ud2(0,32,0,17),Position=ud2(1,-32,0,0),
+            BackgroundColor3=T.bord2,BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=4,
+        })
         lib:mk("UICorner",{Parent=items.track,CornerRadius=ud(0,999)})
         items.thumb=lib:mk("Frame",{Parent=items.track,Size=ud2(0,12,0,12),
             Position=ud2(0,2,.5,-6),BackgroundColor3=T.txt2,BorderSizePixel=0,ZIndex=5})
         lib:mk("UICorner",{Parent=items.thumb,CornerRadius=ud(0,999)})
-        items.glow=lib:mk("ImageLabel",{Parent=items.thumb,Size=ud2(3.5,0,3.5,0),
-            Position=ud2(-1.25,0,-1.25,0),BackgroundTransparency=1,
-            Image="rbxassetid://112971167999062",ImageColor3=T.accent,ImageTransparency=1,
-            ScaleType=Enum.ScaleType.Slice,SliceCenter=Rect.new(v2(100,100),v2(156,156)),
-            BorderSizePixel=0,ZIndex=4})
+        items.glow=lib:mk("ImageLabel",{
+            Parent=items.thumb,Size=ud2(3.5,0,3.5,0),Position=ud2(-1.25,0,-1.25,0),
+            BackgroundTransparency=1,Image="rbxassetid://112971167999062",ImageColor3=T.accent,
+            ImageTransparency=1,ScaleType=Enum.ScaleType.Slice,
+            SliceCenter=Rect.new(v2(100,100),v2(156,156)),BorderSizePixel=0,ZIndex=4,
+        })
         function cfg.set(b)
             cfg.enabled=b; flags[cfg.flag]=b
             lib:tw(items.track,{BackgroundColor3=b and T.accent or T.bord2},A.quad,A.fast)
@@ -602,17 +560,18 @@ function lib:toggle(p)
         end
         items.track.MouseButton1Click:Connect(function() cfg.set(not cfg.enabled) end)
         items.root.MouseButton1Click:Connect(function() cfg.set(not cfg.enabled) end)
-    else -- check
-        items.track=lib:mk("TextButton",{Parent=items.root,Size=ud2(0,15,0,15),
-            Position=ud2(1,-15,0,0),BackgroundColor3=T.bg2,BorderSizePixel=0,
-            Text="",AutoButtonColor=false,ZIndex=4})
+    else
+        items.track=lib:mk("TextButton",{
+            Parent=items.root,Size=ud2(0,15,0,15),Position=ud2(1,-15,0,0),
+            BackgroundColor3=T.bg2,BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=4,
+        })
         lib:mk("UICorner",{Parent=items.track,CornerRadius=ud(0,4)})
-        lib:mk("UIStroke",{Parent=items.track,Color=T.bord2,Transparency=.4,
-            ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
-        items.check=lib:mk("ImageLabel",{Parent=items.track,Size=ud2(1,-2,1,-2),
-            Position=ud2(0,1,0,1),BackgroundTransparency=1,
-            Image="rbxassetid://111862698467575",ImageColor3=T.white,ImageTransparency=1,
-            BorderSizePixel=0,ZIndex=5})
+        lib:mk("UIStroke",{Parent=items.track,Color=T.bord2,Transparency=.4,ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
+        items.check=lib:mk("ImageLabel",{
+            Parent=items.track,Size=ud2(1,-2,1,-2),Position=ud2(0,1,0,1),
+            BackgroundTransparency=1,Image="rbxassetid://111862698467575",
+            ImageColor3=T.white,ImageTransparency=1,BorderSizePixel=0,ZIndex=5,
+        })
         function cfg.set(b)
             cfg.enabled=b; flags[cfg.flag]=b
             lib:tw(items.track,{BackgroundColor3=b and T.accent or T.bg2},A.quad,A.fast)
@@ -647,7 +606,8 @@ function lib:slider(p)
     items.root=lib:mk("Frame",{Parent=self.items.elements,Size=ud2(1,0,0,0),
         AutomaticSize=Enum.AutomaticSize.Y,BackgroundTransparency=1,BorderSizePixel=0})
 
-    local row=lib:mk("Frame",{Parent=items.root,Size=ud2(1,0,0,15),BackgroundTransparency=1,BorderSizePixel=0})
+    local row=lib:mk("Frame",{Parent=items.root,Size=ud2(1,0,0,15),
+        BackgroundTransparency=1,BorderSizePixel=0})
     lib:mk("TextLabel",{Parent=row,Size=ud2(.6,0,1,0),BackgroundTransparency=1,
         FontFace=fonts.body,Text=cfg.name,TextColor3=T.txt0,TextSize=13,
         TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0})
@@ -659,11 +619,14 @@ function lib:slider(p)
         BackgroundColor3=T.glass,BorderSizePixel=0,Text="",AutoButtonColor=false,ZIndex=3})
     lib:mk("UICorner",{Parent=items.track,CornerRadius=ud(0,999)})
     lib:mk("UIStroke",{Parent=items.track,Color=T.border,Transparency=.4,ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
-    items.fill=lib:mk("Frame",{Parent=items.track,Size=ud2(.5,0,1,0),BackgroundColor3=T.accent,BorderSizePixel=0,ZIndex=4})
+
+    items.fill=lib:mk("Frame",{Parent=items.track,Size=ud2(.5,0,1,0),
+        BackgroundColor3=T.accent,BorderSizePixel=0,ZIndex=4})
     lib:mk("UICorner",{Parent=items.fill,CornerRadius=ud(0,999)})
     lib:mk("UIGradient",{Parent=items.fill,Color=cseq{ckey(0,T.acc_hi),ckey(1,T.acc_lo)}})
-    items.thumb=lib:mk("Frame",{Parent=items.fill,Size=ud2(0,13,0,13),Position=ud2(1,-6.5,.5,-6.5),
-        BackgroundColor3=T.white,BorderSizePixel=0,ZIndex=5})
+
+    items.thumb=lib:mk("Frame",{Parent=items.fill,Size=ud2(0,13,0,13),
+        Position=ud2(1,-6.5,.5,-6.5),BackgroundColor3=T.white,BorderSizePixel=0,ZIndex=5})
     lib:mk("UICorner",{Parent=items.thumb,CornerRadius=ud(0,999)})
     items.ring=lib:mk("UIStroke",{Parent=items.thumb,Color=T.accent,Transparency=1,
         ApplyStrokeMode=Enum.ApplyStrokeMode.Border,Thickness=2})
@@ -722,17 +685,19 @@ function lib:dropdown(p)
 
     items.root=lib:mk("Frame",{Parent=self.items.elements,Size=ud2(1,0,0,0),
         AutomaticSize=Enum.AutomaticSize.Y,BackgroundTransparency=1,BorderSizePixel=0})
-    lib:mk("TextLabel",{Parent=items.root,Size=ud2(1,-cfg.width-4,0,18),BackgroundTransparency=1,
-        FontFace=fonts.body,Text=cfg.name,TextColor3=T.txt0,TextSize=13,
-        TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0})
+    lib:mk("TextLabel",{Parent=items.root,Size=ud2(1,-cfg.width-4,0,18),
+        BackgroundTransparency=1,FontFace=fonts.body,Text=cfg.name,TextColor3=T.txt0,
+        TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0})
 
     items.pill=lib:mk("TextButton",{Parent=items.root,Size=ud2(0,cfg.width,0,20),
         Position=ud2(1,-cfg.width,0,-1),BackgroundColor3=T.btn,BorderSizePixel=0,
         Text="",AutoButtonColor=false,ZIndex=3})
     lib:mk("UICorner",{Parent=items.pill,CornerRadius=ud(0,5)})
     lib:mk("UIStroke",{Parent=items.pill,Color=T.bord2,Transparency=.5,ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
+
     items.sel=lib:mk("TextLabel",{Parent=items.pill,Size=ud2(1,-22,1,0),Position=ud2(0,5,0,0),
-        BackgroundTransparency=1,FontFace=fonts.sm,Text=cfg.multi and "None" or (cfg.default or "Select..."),
+        BackgroundTransparency=1,FontFace=fonts.sm,
+        Text=cfg.multi and "None" or(cfg.default or "Select..."),
         TextColor3=T.txt1,TextSize=11,TextXAlignment=Enum.TextXAlignment.Left,
         TextTruncate=Enum.TextTruncate.AtEnd,BorderSizePixel=0,ZIndex=4})
     items.chev=lib:mk("ImageLabel",{Parent=items.pill,Size=ud2(0,9,0,9),Position=ud2(1,-14,.5,-4.5),
@@ -745,7 +710,8 @@ function lib:dropdown(p)
         BackgroundColor3=T.glass,BackgroundTransparency=.06,BorderSizePixel=0,ZIndex=20})
     lib:mk("UICorner",{Parent=items.popup_inner,CornerRadius=ud(0,6)})
     lib:mk("UIStroke",{Parent=items.popup_inner,Color=T.bord2,Transparency=.35,ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
-    lib:mk("UIPadding",{Parent=items.popup_inner,PaddingTop=ud(0,4),PaddingBottom=ud(0,4),PaddingLeft=ud(0,4),PaddingRight=ud(0,4)})
+    lib:mk("UIPadding",{Parent=items.popup_inner,PaddingTop=ud(0,4),PaddingBottom=ud(0,4),
+        PaddingLeft=ud(0,4),PaddingRight=ud(0,4)})
     lib:mk("UIListLayout",{Parent=items.popup_inner,Padding=ud(0,3),SortOrder=Enum.SortOrder.LayoutOrder})
 
     function cfg.set_visible(b)
@@ -765,7 +731,7 @@ function lib:dropdown(p)
             if m then insert(sel,fd.text) end
         end
         cfg.selected_multi=sel
-        items.sel.Text=is_tbl and(concat(sel,", ")~="" and concat(sel,", ") or "None")or(sel[1] or "Select...")
+        items.sel.Text=is_tbl and(concat(sel,", ")~="" and concat(sel,", ")or"None")or(sel[1] or "Select...")
         flags[cfg.flag]=is_tbl and sel or sel[1]; cfg.callback(flags[cfg.flag])
     end
 
@@ -891,7 +857,8 @@ function lib:colorpicker(p)
     items.swatch=lib:mk("TextButton",{
         Parent=lbl and lbl.items.right or self.items.right,
         Size=ud2(0,18,0,18),BackgroundColor3=cfg.color,BorderSizePixel=0,
-        Text="",AutoButtonColor=false,ZIndex=4})
+        Text="",AutoButtonColor=false,ZIndex=4,
+    })
     lib:mk("UICorner",{Parent=items.swatch,CornerRadius=ud(0,5)})
     lib:mk("UIStroke",{Parent=items.swatch,Color=T.bord2,Transparency=.4,ApplyStrokeMode=Enum.ApplyStrokeMode.Border})
 
@@ -1156,13 +1123,15 @@ function lib:keybind(p)
 end
 
 -- ═════════════════════════════════════════════════════════════════════════════
---  SEPARATOR
+--  SEPARATOR  (sidebar label)
 -- ═════════════════════════════════════════════════════════════════════════════
 function lib:separator(p)
-    lib:mk("TextLabel",{Parent=self.items.btn_holder,Size=ud2(1,0,0,14),
-        BackgroundTransparency=1,FontFace=fonts.sm,Text=(p.name or"General"):upper(),
-        TextColor3=T.txt2,TextSize=10,TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0})
-    lib:mk("UIPadding",{Parent=lib:mk("Frame",{Size=ud2(0,0,0,0)}),PaddingLeft=ud(0,2)})
+    lib:mk("TextLabel",{
+        Parent=self.items.btn_holder,Size=ud2(1,0,0,14),
+        BackgroundTransparency=1,FontFace=fonts.sm,
+        Text=(p.name or"General"):upper(),TextColor3=T.txt2,TextSize=10,
+        TextXAlignment=Enum.TextXAlignment.Left,BorderSizePixel=0,
+    })
 end
 
 -- ═════════════════════════════════════════════════════════════════════════════
@@ -1219,7 +1188,7 @@ end
 -- ═════════════════════════════════════════════════════════════════════════════
 function lib:init_config(win)
     win:separator({name="Settings"})
-    local ct=win:tab({name="Config",icon="rbxassetid://139628202576511",tabs={"Manage"}})
+    local ct=win:tab({name="Config",icon="rbxassetid://139628202576511"})
     local col=ct:column({})
     local sec=col:section({name="Configs",size=.55,icon="rbxassetid://139628202576511"})
     local dd=sec:dropdown({name="File",items={"none"},flag="config_name_list",callback=function()end})
