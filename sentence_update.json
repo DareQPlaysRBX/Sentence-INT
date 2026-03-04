@@ -1,10 +1,10 @@
 {
-  "version": "2.0.66-preview",
+  "version": "2.0.67-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Fixed the error appearing while clicking any key on keyboard in Main Page.\n• Maded some minor optimization fixes for Instance Explorer Handler.\n• Maded some performance optimizations in overall and that's all. Have fun :)",
-  "file_size": 7516160,
+  "changelog": "• Added new Instance Manager Panel, you can find it in Settings Panel.\n• Maded some minor changes in Attachment Manager and Attach Methods.\n• Fixed filtering scripts in Script Hub.\n• Maded some other minor fixes and improvements in overall.",
+  "file_size": 7520256,
   "is_mandatory": false,
-  "commit_sha": "dbcc662ea7f5fca45bf0649019d7ac200955dc9f",
+  "commit_sha": "5bd45e61db669ea08adb87aefd46cabb03646c31",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
