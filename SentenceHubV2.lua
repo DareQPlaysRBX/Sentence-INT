@@ -416,20 +416,18 @@ function Sentence:CreateWindow(cfg)
     local minBtn,   minCL   = WCtrl("Min",  "min",  42, P.raised)
     local hideBtn,  hideCL  = WCtrl("Hide", "hide", 72, P.raised)
 
-    -- Logo
+    -- Logo (starts visible; image loads async on Roblox's side)
     local logoImg=I({Ico=cfg.Icon,Sz=UDim2.new(0,20,0,20),
         Pos=UDim2.new(0,108,0.5,0),AP=Vector2.new(0,0.5),
-        IA=1,Z=5,Par=titleBar})
-    task.delay(0.7,function() tw(logoImg,{ImageTransparency=0},TI_MED) end)
+        IA=0,Z=5,Par=titleBar})
 
-    -- Window name
+    -- Window name (hidden until loading finishes)
     local nameL=T({Txt=cfg.Name,
         Sz=UDim2.new(0,200,0,16),Pos=UDim2.new(0,134,0,8),
         Font=Enum.Font.GothamBold,TS=14,Col=P.hi,TA=1,Z=5,Par=titleBar})
     local subL=T({Txt=cfg.Subtitle,
         Sz=UDim2.new(0,200,0,12),Pos=UDim2.new(0,134,0,26),
         Font=Enum.Font.Gotham,TS=10,Col=P.lime,TA=1,Z=5,Par=titleBar})
-    task.delay(0.7,function() tw(nameL,{TextTransparency=0},TI_MED); tw(subL,{TextTransparency=0.2},TI_MED) end)
 
     -- Version  (right side)
     local verL=T({Txt="v"..Sentence.Version,
@@ -560,6 +558,10 @@ function Sentence:CreateWindow(cfg)
         tw(win,{Size=FULL},TI_SLOW)
         task.wait(0.35)
     end
+
+    -- Reveal title bar text AFTER loading finishes (logo is always visible IA=0)
+    tw(nameL,{TextTransparency=0},TI_MED)
+    tw(subL,{TextTransparency=0.2},TI_MED)
 
     -- ── Controls ──────────────────────────────────────────────────────────────
     local function HideW()
