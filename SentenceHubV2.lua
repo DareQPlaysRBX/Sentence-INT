@@ -398,7 +398,7 @@ function Sentence:CreateWindow(cfg)
             R=UDim.new(1,0),Z=6,Par=titleBar})
         local ic=I({Ico=icn,Sz=UDim2.new(0,12,0,12),
             Pos=UDim2.new(0.5,0,0.5,0),AP=Vector2.new(0.5,0.5),
-            Col=P.dim,IA=0,Z=7,Par=btn})
+            Col=P.mid,IA=0,Z=7,Par=btn})
         local cl=CL(btn,8)
         btn.MouseEnter:Connect(function()
             tw(btn,{BackgroundColor3=hoverCol or P.raised,BackgroundTransparency=0},TI_FAST)
@@ -406,9 +406,8 @@ function Sentence:CreateWindow(cfg)
         end)
         btn.MouseLeave:Connect(function()
             tw(btn,{BackgroundTransparency=0},TI_FAST)
-            tw(ic,{ImageColor3=P.dim,ImageTransparency=0.1},TI_FAST)
+            tw(ic,{ImageColor3=P.mid,ImageTransparency=0},TI_FAST)
         end)
-        task.delay(0.6,function() tw(ic,{ImageTransparency=0.1},TI_MED) end)
         return btn,cl,ic
     end
 
@@ -620,7 +619,7 @@ function Sentence:CreateWindow(cfg)
             S=false,R=UDim.new(0,6),Z=5,Par=tabScroll})
         I({Ico=hCfg.Icon,Sz=UDim2.new(0,14,0,14),
             Pos=UDim2.new(0,10,0.5,0),AP=Vector2.new(0,0.5),
-            Col=P.dim,IA=0,Z=6,Par=hPill})
+            Col=P.mid,IA=0,Z=6,Par=hPill})
         T({Txt="Home",Sz=UDim2.new(1,-28,0,14),
             Pos=UDim2.new(0,28,0.5,0),AP=Vector2.new(0,0.5),
             Font=Enum.Font.GothamSemibold,TS=12,Col=P.mid,Z=6,Par=hPill})
@@ -704,7 +703,7 @@ function Sentence:CreateWindow(cfg)
                 td.page.Visible=false
                 local ic=td.btn:FindFirstChildOfClass("ImageLabel")
                 local lb=td.btn:FindFirstChildOfClass("TextLabel")
-                if ic then tw(ic,{ImageColor3=P.dim},TI_FAST) end
+                if ic then tw(ic,{ImageColor3=P.mid},TI_FAST) end
                 if lb then tw(lb,{TextColor3=P.mid},TI_FAST) end
             end
             hPage.Visible=true
@@ -749,7 +748,7 @@ function Sentence:CreateWindow(cfg)
 
         local pIco=I({Ico=tCfg.Icon,Sz=UDim2.new(0,14,0,14),
             Pos=UDim2.new(0,10,0.5,0),AP=Vector2.new(0,0.5),
-            Col=isFirst and P.lime or P.dim,Z=6,Par=pill})
+            Col=isFirst and P.lime or P.mid,Z=6,Par=pill})
         local pLbl=T({Txt=tCfg.Name,Sz=UDim2.new(1,-28,0,14),
             Pos=UDim2.new(0,28,0.5,0),AP=Vector2.new(0,0.5),
             Font=Enum.Font.GothamSemibold,TS=12,
@@ -782,7 +781,7 @@ function Sentence:CreateWindow(cfg)
                 td.page.Visible=false
                 local ic=td.btn:FindFirstChildOfClass("ImageLabel")
                 local lb=td.btn:FindFirstChildOfClass("TextLabel")
-                if ic then tw(ic,{ImageColor3=P.dim},TI_FAST) end
+                if ic then tw(ic,{ImageColor3=P.mid},TI_FAST) end
                 if lb then tw(lb,{TextColor3=P.mid},TI_FAST) end
             end
             local hp=contentArea:FindFirstChild("HomePage")
@@ -791,7 +790,7 @@ function Sentence:CreateWindow(cfg)
             if hT then
                 local hi=hT:FindFirstChildOfClass("ImageLabel")
                 local hl=hT:FindFirstChildOfClass("TextLabel")
-                if hi then tw(hi,{ImageColor3=P.dim},TI_FAST) end
+                if hi then tw(hi,{ImageColor3=P.mid},TI_FAST) end
                 if hl then tw(hl,{TextColor3=P.mid},TI_FAST) end
             end
             tPage.Visible=true
