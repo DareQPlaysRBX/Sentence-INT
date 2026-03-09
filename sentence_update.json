@@ -1,7 +1,7 @@
 {
   "version": "2.0.68-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added several visual improvements to the main application UI.\n• Expanded Instance Manager — now displays CPU and RAM usage for each process, as well as its runtime.\n• Optimized the console logging system and removed duplicate log entries.\n• Updated all packages and dependencies to the latest versions (this update may require using SE-Installer).\n• Improved overall project performance through various fixes and optimizations for newly added features.",
+  "changelog": "• Added several visual improvements to the main application UI. (Important: Go to bin/translation folder and detele all the files from there. Some labels was using icons and we removed them now)\n• Expanded Instance Manager — now displays CPU and RAM usage for each process, as well as its runtime.\n• Optimized the console logging system and removed duplicate log entries.\n• Updated all packages and dependencies to the latest versions (this update may require using SE-Installer).\n• Improved overall project performance through various fixes and optimizations for newly added features.",
   "file_size": 7598080,
   "is_mandatory": false,
   "commit_sha": "ab20758859d5a83f872b5aa54405fcca04609001",
