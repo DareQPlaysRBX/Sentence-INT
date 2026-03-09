@@ -1,10 +1,10 @@
 {
-  "version": "2.0.67-preview",
+  "version": "2.0.68-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added new Instance Manager Panel, you can find it in Settings Panel.\n• Maded some minor changes in Attachment Manager and Attach Methods.\n• Fixed filtering scripts in Script Hub.\n• Maded some other minor fixes and improvements in overall.",
-  "file_size": 7520256,
+  "changelog": "• Added several visual improvements to the main application UI.\n• Expanded Instance Manager — now displays CPU and RAM usage for each process, as well as its runtime.\n• Optimized the console logging system and removed duplicate log entries.\n• Updated all packages and dependencies to the latest versions (this update may require using SE-Installer).\n• Improved overall project performance through various fixes and optimizations for newly added features."
+  "file_size": 7598080,
   "is_mandatory": false,
-  "commit_sha": "5bd45e61db669ea08adb87aefd46cabb03646c31",
+  "commit_sha": "ab20758859d5a83f872b5aa54405fcca04609001",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
