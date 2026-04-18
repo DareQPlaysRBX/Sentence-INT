@@ -1,0 +1,11 @@
+{
+  "version": "1.3.5",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Madium-Module.dll",
+  "changelog": "- Updated to the latest version 1.3.5",
+  "file_size": 2162688,
+  "is_mandatory": false,
+  "commit_sha": "6ace334e60015fb2d02caa53169d29896c48fadd",
+  "gitlab_project": "dareqplays/Sentence-INT",
+  "release_date": "2025-01-15T10:00:00Z",
+  "minimum_app_version": "2.0.50-preview"
+}
