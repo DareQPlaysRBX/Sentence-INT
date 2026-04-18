@@ -4,7 +4,7 @@
   "changelog": "- Updated to the latest version v1.3.30",
   "file_size": 2162688,
   "is_mandatory": false,
-  "sha256_hash": "76717BAE1B0EB9C1722A3EEAE61195EDAA827D619EFD0788438A831A9369BC41",
-  "release_date": "2025-01-15T10:00:00Z",
+  "commit_sha": "88e490977ad51a70c4e72811dfa5b9024d6b1325",
+  "gitlab_project": "dareqplays/Sentence-INT",
   "minimum_app_version": "2.0.50-preview"
 }
