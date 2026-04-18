@@ -1,7 +1,7 @@
 {
   "version": "2.0.70-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added new Medium API - now u can use another new execution module thanks to SENTENCE :P\n• All code has been refactored and better optimized with even reduced file size.\n• Added new Execution Module Details Panel in General Settings.\n• Added new orginal filtering methods and options in Script Hub\n• Maded some visual improvements and stability changes in UI + Editor.\n• Reduced decompilation time via Instance Explorer.",
+  "changelog": "• Added new Medium API - now u can use another new execution module thanks to SENTENCE :P\n• All code has been refactored and better optimized with even reduced file size.\n• Added new Execution Module Details Panel in General Settings.\n• Added new orginal filtering methods and options in Script Hub\n• Maded some visual improvements and stability changes in UI + Editor.\n• Reduced decompilation time via Instance Explorer.\n[THIS UPDATE REQUIRES TO USE SE-INSTALLER TO UPDATE ALL FILES CORRECTLY]",
   "file_size": 6754304,
   "is_mandatory": false,
   "commit_sha": "2fec90a9d1c95a6ec8631ad154e4e6209c1687c9",
