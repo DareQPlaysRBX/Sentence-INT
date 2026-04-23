@@ -1,5 +1,5 @@
 {
-  "version": "2.0.72-preview",
+  "version": "2.0.71-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
   "changelog": "• Fixed Auto Updater for Madium API.\n• Fixed LSP port reconnecting, now LSP can reconnect on previous created host.\n• Maded some optimization improvements.",
   "file_size": 6729728,
