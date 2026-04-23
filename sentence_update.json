@@ -1,10 +1,10 @@
 {
-  "version": "2.0.71-preview",
+  "version": "2.0.72-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Added a new Universal API that connects all execution modules together and provides more efficient runtime methods.\n• A new Attachment Bridge — a bridge that updates status progressively as events occur.\n• Monaco LSP — the editor now includes an integrated Lua language server that runs on localhost and continuously tracks events in the code, updating hints and other global function types.\n• Maded some optimization improvements.\n• Fixed Auto-Attach for VelocityAPI.\n• Fixed AutoExec Support for MadiumAPI.\n [THIS UPDATE REQUIRES TO USE SE-INSTALLER TO UPDATE ALL FILES CORRECTLY]",
-  "file_size": 6709248,
+  "changelog": "• Fixed Auto Updater for Madium API.\n• Fixed LSP port reconnecting, now LSP can reconnect on previous created host.\n• Maded some optimization improvements.",
+  "file_size": 6729728,
   "is_mandatory": false,
-  "commit_sha": "c3880f62b255c5a4c2db22f622688bb8f86a6a08",
+  "commit_sha": "d1f5c9a6924b500b66b3000805caddb68a74fdaf",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
