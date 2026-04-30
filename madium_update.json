@@ -1,11 +1,11 @@
 {
-  "version": "1.4.1",
+  "version": "1.4.0",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Madium-Module.dll",
   "loader_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Loader.exe",
   "changelog": "Updated to the latest version 1.4.1",
   "file_size": 10756096,
   "is_mandatory": false,
-  "commit_sha": "db080817eb1b7f84abdf85b612e1cc6e06ad7b07",
+  "commit_sha": "03c02656881df4414b2a08b797ac2d045cdd30de",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Modules/Madium-Module.dll"
 }
