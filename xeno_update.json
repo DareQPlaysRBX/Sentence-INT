@@ -1,9 +1,9 @@
 {
-  "version": "v1.3.50",
+  "version": "v1.3.55",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Modules/Xeno.dll",
-  "changelog": "Updated to the latest version v1.3.50",
+  "changelog": "Updated to the latest version v1.3.55",
   "file_size": 2387968,
   "is_mandatory": false,
-  "commit_sha": "fdfb4c879efb01673c5035f776852b9cb4b036d4",
+  "commit_sha": "a2d57972dafc65b73efea320c504b244c00942ae",
   "gitlab_project": "dareqplays/Sentence-INT"
 }
