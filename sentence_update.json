@@ -1,10 +1,10 @@
 {
-  "version": "2.0.72-preview",
+  "version": "2.0.75-preview",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Fixed the Auto Updater for the Madium API – it now correctly updates all dependent files.\n• Fixed the LSP connection – resolved issues where API changes could cause sudden disconnections and prevent reconnection on previously created ports.\n• Updated hardware acceleration – GPU-based rendering of animations, effects, and UI elements is now significantly smoother and more efficient.\n• Fixed automatic shutdown of existing processes, as well as created hosts and sockets by the Madium API and Xeno when closing the application.",
+  "changelog": "• Refreshed the Sentence editor with a cleaner premium dark interface, improved spacing, slimmer navigation, and more consistent matte black/silver styling.\n• Redesigned Script Explorer with a cleaner layout, improved folder/file presentation, smoother hover animations, better sorting, and fixed collapsed folders leaving empty scroll space.\n• Simplified Script Explorer by removing unnecessary counters, filters, search bar, and heavy button backgrounds for a cleaner minimal workflow.\n• Improved New File, New Folder, and GitHub import dialogs with a more modern premium style and fixed dispatcher errors when opening them.\n• Improved GitHub import visibility and restored proper button behavior in Script Explorer.\n• Updated Instance Explorer with a premium dark style, removed default blue selection/hover colors, improved readability, and matched its panel colors with the Script Preview Editor.\n• Restored the original LuaU - LSP badge style in the editor.\n• Improved editor UI details including icons, corner radius, panel colors, hover effects, animations, and overall visual consistency.",
   "file_size": 6729728,
   "is_mandatory": false,
-  "commit_sha": "dbc7978632861592d3b2f595eeb8de7ea2fc7369",
+  "commit_sha": "8814f74900a1ec95cb3f8ac5c141e08cec57fbd0",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "SentenceRBX.dll"
 }
