@@ -6,5 +6,15 @@
   "is_mandatory": false,
   "commit_sha": "ebcb359499cd10169e0234d5195b41e89b95a9b6",
   "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "SentenceRBX.dll"
+  "file_path": "SentenceRBX.dll",
+  "tauri": {
+    "version": "2.6.13",
+    "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
+    "changelog": "SENTENCE Tauri: current interface, SENCHAN, Sentence Guide, Luau editor and Instance Explorer.",
+    "file_size": 88165420,
+    "is_mandatory": false,
+    "commit_sha": "51c9cec8b0cfe21c63843f569f39c4689ba8dd23",
+    "gitlab_project": "dareqplays/Sentence-INT",
+    "file_path": "Debug.zip"
+  }
 }
