@@ -1,13 +1,15 @@
 {
   "version": "2.1.0-Preview",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
-  "sha256": "081fe0e798fa60960484bbd72261b73dc095aff95dd684156f49e0c3d72e3942",
+  "sha256": "303f3cd01bbd303dccdcc060c6ce27ab92b6eba24367c14033a0fa51133a4240",
   "application_sha256": "4bd422c077300b8dbcd83dad31a6f2d90b8e43f705b88aff36a51caf3be6da73",
-  "layout_version": 3,
-  "file_size": 156545794,
-  "commit_sha": "GENERATE_WITH_PREPARE_MANIFEST_AFTER_UPLOAD",
-  "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "Debug.zip",
+  "layout_version": 4,
+  "runtime_file_size": 62139871,
+  "runtime_sha256": "ebf51c1c1b56f2b46424084c2d06b87df4614f246388c8b032a0a44c05f84d5d",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
+  "changelog": "SENTENCE Tauri: current interface, SENCHAN, Sentence Guide, Luau editor and Instance Explorer.",
+  "file_size": 94405821,
   "is_mandatory": false,
-  "changelog": "SENTENCE 2.1.0 Preview with installer runtime preparation."
+  "commit_sha": "6977a20a01ec25db40b602b50857f09aa4ee3110",
+  "gitlab_project": "dareqplays/Sentence-INT",
+  "file_path": "Debug.zip"
 }
