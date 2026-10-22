@@ -5,11 +5,11 @@
   "layout_version": 4,
   "runtime_file_size": 62139871,
   "runtime_sha256": "ebf51c1c1b56f2b46424084c2d06b87df4614f246388c8b032a0a44c05f84d5d",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
   "changelog": "SENTENCE Tauri: current interface, SENCHAN, Sentence Guide, Luau editor and Instance Explorer.",
   "file_size": 94405821,
   "is_mandatory": false,
-  "commit_sha": "6977a20a01ec25db40b602b50857f09aa4ee3110",
+  "commit_sha": "0cb5716e9473dc69e27766df3831600d4b45dc4f",
   "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "Debug.zip"
+  "file_path": "Release.zip"
 }
