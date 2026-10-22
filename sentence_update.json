@@ -1,20 +1,13 @@
 {
-  "version": "2.0.75-preview",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SentenceRBX.dll",
-  "changelog": "• Introduced the new SENTENCE Guide / SENTENCE LSP system with richer Luau, Roblox, UNC, sUNC, and Myriad-style autocomplete support.\n• Added detailed function descriptions, usage guidance, hover documentation, signatures, and helper typings to improve scripting directly inside the editor.\n• Refreshed the Sentence editor with a cleaner premium dark interface, improved spacing, slimmer navigation, and more consistent matte black/silver styling.\n• Redesigned Script Explorer with a cleaner premium layout, improved folder/file presentation, smoother hover animations, better sorting, and fixed collapsed folders leaving empty scroll space.\n• Simplified Script Explorer by removing unnecessary counters, filters, search bar, and heavy button backgrounds for a cleaner minimal workflow.\n• Improved New File, New Folder, and GitHub import dialogs with a more modern premium style and fixed dispatcher errors when opening them.\n• Updated Instance Explorer with a premium dark style, removed default blue selection/hover colors, improved readability, and matched its panel colors with the Script Preview Editor.\n• Improved editor UI details including tabs, icons, corner radius, panel colors, hover effects, animations, scrollbars, and overall theme consistency.",
-  "file_size": 6950912,
-  "is_mandatory": false,
-  "commit_sha": "ebcb359499cd10169e0234d5195b41e89b95a9b6",
+  "version": "2.1.0-Preview",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
+  "sha256": "081fe0e798fa60960484bbd72261b73dc095aff95dd684156f49e0c3d72e3942",
+  "application_sha256": "4bd422c077300b8dbcd83dad31a6f2d90b8e43f705b88aff36a51caf3be6da73",
+  "layout_version": 3,
+  "file_size": 156545794,
+  "commit_sha": "GENERATE_WITH_PREPARE_MANIFEST_AFTER_UPLOAD",
   "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "SentenceRBX.dll",
-  "tauri": {
-    "version": "2.6.13",
-    "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip",
-    "changelog": "SENTENCE Tauri: current interface, SENCHAN, Sentence Guide, Luau editor and Instance Explorer.",
-    "file_size": 88165420,
-    "is_mandatory": false,
-    "commit_sha": "51c9cec8b0cfe21c63843f569f39c4689ba8dd23",
-    "gitlab_project": "dareqplays/Sentence-INT",
-    "file_path": "Debug.zip"
-  }
+  "file_path": "Debug.zip",
+  "is_mandatory": false,
+  "changelog": "SENTENCE 2.1.0 Preview with installer runtime preparation."
 }
