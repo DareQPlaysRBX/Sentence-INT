@@ -1,15 +1,15 @@
 {
   "version": "2.1.0-Preview",
-  "sha256": "303f3cd01bbd303dccdcc060c6ce27ab92b6eba24367c14033a0fa51133a4240",
-  "application_sha256": "4bd422c077300b8dbcd83dad31a6f2d90b8e43f705b88aff36a51caf3be6da73",
+  "sha256": "3a25c2bfd31a22ea14c05a0681eaad072f9c2c6b1957f4f1d3272dfc7962d342",
+  "application_sha256": "e1e4f06cf96e7cf516f46284a8e1679a8a35795d755e12378f12d30925b3e17a",
   "layout_version": 4,
-  "runtime_file_size": 62139871,
-  "runtime_sha256": "ebf51c1c1b56f2b46424084c2d06b87df4614f246388c8b032a0a44c05f84d5d",
+  "runtime_file_size": 62139872,
+  "runtime_sha256": "3a8b177964845af8765d57d1090b371edb94fba89b5357e55dfab0ebf588d4bd",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "SENTENCE Tauri: current interface, SENCHAN, Sentence Guide, Luau editor and Instance Explorer.",
-  "file_size": 94405821,
+  "changelog": "SENTENCE 2.1.0 Preview: fixes installer language on first launch, Polish settings and keybind labels, shortcut conflict messages, search result plurals and copying editor theme colors including Retro Phosphor.",
+  "file_size": 94403995,
   "is_mandatory": false,
-  "commit_sha": "0cb5716e9473dc69e27766df3831600d4b45dc4f",
+  "commit_sha": "340d9156b15990861666c38cf6185c5c2c433b99",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip"
 }
