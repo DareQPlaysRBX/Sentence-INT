@@ -1,15 +1,15 @@
 {
   "version": "2.1.0-Preview",
-  "sha256": "ac141f8161ccd5072700d2fc51ecdcb39997dbb080a1e832ddd2a7d23ad3f743",
-  "application_sha256": "a97ff8f487c929111927d3f0225d6bb8e806878f6a0406e1b74a06462bdcb404",
+  "sha256": "8d5edb803736ba6b4a011077ead657ede914095c5195681828c7194d08aa4d1f",
+  "application_sha256": "7c74f01db7273cee8b1e2b51aa6a9745ca7d8a25d69cf57c066e9b348eb26a0b",
   "layout_version": 4,
-  "runtime_file_size": 62140411,
-  "runtime_sha256": "9b87bbb69b9ef00dd4820d1c77ca8298b37a79cbf3a33bcbf7f20930eca314bf",
+  "runtime_file_size": 62140410,
+  "runtime_sha256": "f0bca35698eab7b0340347009e5df97f7681f807ec615e24bbe5fb0c1442c5fc",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "SENTENCE Preview 2026-10-24: appearance and WEAO fixes, natural SENCHAN conversation, flush editor, console and sidebar panels.",
-  "file_size": 91489695,
+  "changelog": "SENTENCE Preview: SENCHAN replies now follow the language selected in SENTENCE, including English messages and language changes within an existing conversation. Includes previous appearance, WEAO and panel fixes.",
+  "file_size": 91488830,
   "is_mandatory": false,
-  "commit_sha": "bc0a15e09fe2f44dbafd64459a8d10aa3e5b196b",
+  "commit_sha": "30fd8b00c0f4247843d3cfc412d0b3a58b6be02a",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip"
 }
