@@ -1,15 +1,15 @@
 {
   "version": "2.1.0-Preview",
-  "sha256": "3a25c2bfd31a22ea14c05a0681eaad072f9c2c6b1957f4f1d3272dfc7962d342",
-  "application_sha256": "e1e4f06cf96e7cf516f46284a8e1679a8a35795d755e12378f12d30925b3e17a",
+  "sha256": "ac141f8161ccd5072700d2fc51ecdcb39997dbb080a1e832ddd2a7d23ad3f743",
+  "application_sha256": "a97ff8f487c929111927d3f0225d6bb8e806878f6a0406e1b74a06462bdcb404",
   "layout_version": 4,
-  "runtime_file_size": 62139872,
-  "runtime_sha256": "3a8b177964845af8765d57d1090b371edb94fba89b5357e55dfab0ebf588d4bd",
+  "runtime_file_size": 62140411,
+  "runtime_sha256": "9b87bbb69b9ef00dd4820d1c77ca8298b37a79cbf3a33bcbf7f20930eca314bf",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "SENTENCE 2.1.0 Preview: fixes installer language on first launch, Polish settings and keybind labels, shortcut conflict messages, search result plurals and copying editor theme colors including Retro Phosphor.",
-  "file_size": 94403995,
+  "changelog": "SENTENCE Preview 2026-10-24: appearance and WEAO fixes, natural SENCHAN conversation, flush editor, console and sidebar panels.",
+  "file_size": 91489695,
   "is_mandatory": false,
-  "commit_sha": "340d9156b15990861666c38cf6185c5c2c433b99",
+  "commit_sha": "bc0a15e09fe2f44dbafd64459a8d10aa3e5b196b",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip"
 }
