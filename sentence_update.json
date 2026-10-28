@@ -1,23 +1,23 @@
 {
   "version": "2.1.25",
-  "sha256": "ddc21076d80b40674f57c09a09d9058740f149b7725d3f928e10350185ed4e53",
-  "application_sha256": "eadddffa690acb822523e12ba5e03e2b6712b311c3c5d7113c1137f3719e7167",
+  "sha256": "3c93d7545d6b04b542a6ae56a885e133fb07d7b9c04094c958796fefc807c3a2",
+  "application_sha256": "a0d53d3a07f5b5fd15933c64f06dab55fc7f8d60421274892276db0c94dea2bd",
   "layout_version": 4,
   "runtime_file_size": 37834248,
-  "runtime_sha256": "0acf95de1085d344bf9a5da6ad4669e663ffd97854eaced5455ad4584d95ee39",
+  "runtime_sha256": "9d36fef4b54d82d24432ddc80cfa4554076b6804f741d48133d5e2a0777bec70",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
   "changelog": "Added a new Software Auto-Updater (SENTENCE will now automatically check for and install updates on startup). Made minor color adjustments to the Halloween 2026 Theme. Scripts selected in Instance Explorer will now be prioritized for decompilation. Various minor bug fixes and improvements. Test signature: Yume Bytes Community, self-signed and untrusted.",
-  "file_size": 91550527,
+  "file_size": 91541060,
   "is_mandatory": false,
-  "commit_sha": "62701786200fd941650bce137218e3065170d120",
+  "commit_sha": "0d763766e494c189eddd9cbb7c0046fb8b7db6b2",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip",
   "software": {
     "version": "2.1.25",
     "format": "sentence-software-v1",
-    "sha256": "77dd8c3824d2a523f02f70a00b80cb0ed44aea5398fbeed444868014677dbb84",
-    "application_sha256": "eadddffa690acb822523e12ba5e03e2b6712b311c3c5d7113c1137f3719e7167",
-    "file_size": 68761408,
-    "commit_sha": "62701786200fd941650bce137218e3065170d120"
+    "sha256": "580d3740b88ff5f9cc881ba08a1829c9efb11a365bd68a0e9bbfbddfdfd3c041",
+    "application_sha256": "a0d53d3a07f5b5fd15933c64f06dab55fc7f8d60421274892276db0c94dea2bd",
+    "file_size": 68751943,
+    "commit_sha": "0d763766e494c189eddd9cbb7c0046fb8b7db6b2"
   }
 }
