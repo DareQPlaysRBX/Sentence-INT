@@ -7,9 +7,9 @@ SENTENCE is a Tauri desktop scripting workspace with a Luau editor, Sentence Gui
 ## Download
 
 - [SENTENCE 2.1.25 release](https://github.com/DareQPlaysRBX/Sentence-INT/releases/tag/v2.1.25)
-- [Release.zip](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/Release.zip)
-- [Matching Runtime.zip](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/Runtime.zip)
-- [SHA-256 checksums](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/SHA256SUMS.txt)
+- [Release.zip](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/SENTENCE-2.1.25-final-Release.zip)
+- [Matching Runtime.zip](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/SENTENCE-2.1.25-final-Runtime.zip)
+- [SHA-256 checksums](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.25/SENTENCE-2.1.25-final-SHA256SUMS.txt)
 - [SENInstaller](https://gitlab.com/dareqplays/Sentence-INT/-/blob/main/SENInstaller.exe)
 
 Release.zip and Runtime.zip are a matched pair for the installer; keep them in the same folder for local package verification. The application contains an embedded runtime. Preserve bin beside SENTENCE.exe. The scripts folder is empty for your own scripts. Public packages contain no personal scripts, project data, AI keys or signing private keys.
@@ -18,18 +18,18 @@ Microsoft Edge WebView2 and Microsoft Visual C++ Redistributable may be required
 
 ## Current changes
 
-- Software Auto Updater with animated update stages at the bottom right of the loading screen, without an outer background or border.
-- Priority decompilation of selected Explorer scripts and distinct module update status colors.
-- Improved Polish translation and Halloween tab accent.
-- The separate SENCHAN Explorer remains removed.
+- Added a new **Software Auto-Updater** (SENTENCE will now automatically check for and install updates on startup).
+- Made minor color adjustments to the **Halloween 2026 Theme**.
+- Scripts selected in **Instance Explorer** will now be prioritized for decompilation.
+- Various minor bug fixes and improvements.
 
-The actual EXE ProductVersion, FileVersion and displayed application version are **2.1.25**, with all current changes retained. Earlier releases remain in release history.
+The Find game scripts suggestion has been removed from SENCHAN. Current build: **final-log-20261028**, version **2.1.25**. Download the assets prefixed SENTENCE-2.1.25-final-. Rename the Release and Runtime files to Release.zip and Runtime.zip for local installer verification. Earlier assets are preserved as previous builds.
 
 ## Automatic updates
 
 The software section of [sentence_update.json](https://github.com/DareQPlaysRBX/Sentence-INT/blob/main/sentence_update.json) points to **2.1.25**. Supported releases download newer Software.zip packages from the exact GitLab commit recorded there, verify size, SHA-256 and executable version, save the project and stage replacement. A separate worker keeps the previous EXE and restarts the application. Personal scripts, settings and modules are preserved.
 
-**Installations with versions above 2.1.25 require manual installation of this release; the updater does not downgrade.** Older releases without the updater also require manual installation. Application and module updates are separate. Developer and headless builds do not update automatically.
+**Installations already on 2.1.25 or above require manual installation of this refreshed build; the updater only installs higher version numbers.** Older releases without the updater also require manual installation. Application and module updates are separate. Developer and headless builds do not update automatically.
 
 ## Test signature
 
