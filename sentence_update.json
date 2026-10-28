@@ -1,23 +1,23 @@
 {
   "version": "2.1.25",
-  "sha256": "30061e1d500d53159c149640c0dd9161a2ae5f00f12c5e1705130e37eae56f31",
-  "application_sha256": "4649ba6cb919c2d6220003141fd4737a7ec022eb8ae49cde67fe5d6231994ccc",
+  "sha256": "ddc21076d80b40674f57c09a09d9058740f149b7725d3f928e10350185ed4e53",
+  "application_sha256": "eadddffa690acb822523e12ba5e03e2b6712b311c3c5d7113c1137f3719e7167",
   "layout_version": 4,
-  "runtime_file_size": 37834246,
-  "runtime_sha256": "7cb88faab02571136ce9578da801aac0784073ebb882939248d69f491a867456",
+  "runtime_file_size": 37834248,
+  "runtime_sha256": "0acf95de1085d344bf9a5da6ad4669e663ffd97854eaced5455ad4584d95ee39",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "SENTENCE 2.1.25: current changes preserved; animated update stages without outer background or border, Explorer improvements, Polish translation and Halloween accent. Self-signed TEST signature: Yume Bytes Community; not trusted by Windows.",
-  "file_size": 91541294,
+  "changelog": "Added a new Software Auto-Updater (SENTENCE will now automatically check for and install updates on startup). Made minor color adjustments to the Halloween 2026 Theme. Scripts selected in Instance Explorer will now be prioritized for decompilation. Various minor bug fixes and improvements. Test signature: Yume Bytes Community, self-signed and untrusted.",
+  "file_size": 91550527,
   "is_mandatory": false,
-  "commit_sha": "e1a0e20dbe00d6d0e18ccb71e5fb5e3c248aae4a",
+  "commit_sha": "62701786200fd941650bce137218e3065170d120",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip",
   "software": {
     "version": "2.1.25",
     "format": "sentence-software-v1",
-    "sha256": "7996d502861d1873374b59058991701541cf99e50a3eaf5617020053011a7ed0",
-    "application_sha256": "4649ba6cb919c2d6220003141fd4737a7ec022eb8ae49cde67fe5d6231994ccc",
-    "file_size": 68751786,
-    "commit_sha": "e1a0e20dbe00d6d0e18ccb71e5fb5e3c248aae4a"
+    "sha256": "77dd8c3824d2a523f02f70a00b80cb0ed44aea5398fbeed444868014677dbb84",
+    "application_sha256": "eadddffa690acb822523e12ba5e03e2b6712b311c3c5d7113c1137f3719e7167",
+    "file_size": 68761408,
+    "commit_sha": "62701786200fd941650bce137218e3065170d120"
   }
 }
