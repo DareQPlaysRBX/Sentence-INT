@@ -1,23 +1,23 @@
 {
-  "version": "2.1.0-Preview",
-  "sha256": "8d5edb803736ba6b4a011077ead657ede914095c5195681828c7194d08aa4d1f",
-  "application_sha256": "7c74f01db7273cee8b1e2b51aa6a9745ca7d8a25d69cf57c066e9b348eb26a0b",
+  "version": "2.1.25",
+  "sha256": "30061e1d500d53159c149640c0dd9161a2ae5f00f12c5e1705130e37eae56f31",
+  "application_sha256": "4649ba6cb919c2d6220003141fd4737a7ec022eb8ae49cde67fe5d6231994ccc",
   "layout_version": 4,
-  "runtime_file_size": 62140410,
-  "runtime_sha256": "f0bca35698eab7b0340347009e5df97f7681f807ec615e24bbe5fb0c1442c5fc",
+  "runtime_file_size": 37834246,
+  "runtime_sha256": "7cb88faab02571136ce9578da801aac0784073ebb882939248d69f491a867456",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "SENTENCE Preview: SENCHAN replies now follow the language selected in SENTENCE, including English messages and language changes within an existing conversation. Includes previous appearance, WEAO and panel fixes.",
-  "file_size": 91488830,
+  "changelog": "SENTENCE 2.1.25: current changes preserved; animated update stages without outer background or border, Explorer improvements, Polish translation and Halloween accent. Self-signed TEST signature: Yume Bytes Community; not trusted by Windows.",
+  "file_size": 91541294,
   "is_mandatory": false,
-  "commit_sha": "30fd8b00c0f4247843d3cfc412d0b3a58b6be02a",
+  "commit_sha": "e1a0e20dbe00d6d0e18ccb71e5fb5e3c248aae4a",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip",
   "software": {
-    "version": "2.1.27",
+    "version": "2.1.25",
     "format": "sentence-software-v1",
-    "sha256": "25972f321807fce4afb087d5faf128bfd42b4a6c7a3f4a8bc4b51c279e0eb3f0",
-    "application_sha256": "fb1c79f3ecc2a62014843ecd9324a8e958ba90d4cfad8371a82252216a7acfb7",
-    "file_size": 68754554,
-    "commit_sha": "a853410712166cabbbae7982f0f29d3c71b8f394"
+    "sha256": "7996d502861d1873374b59058991701541cf99e50a3eaf5617020053011a7ed0",
+    "application_sha256": "4649ba6cb919c2d6220003141fd4737a7ec022eb8ae49cde67fe5d6231994ccc",
+    "file_size": 68751786,
+    "commit_sha": "e1a0e20dbe00d6d0e18ccb71e5fb5e3c248aae4a"
   }
 }
