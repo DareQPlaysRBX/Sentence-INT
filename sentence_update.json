@@ -11,5 +11,13 @@
   "is_mandatory": false,
   "commit_sha": "30fd8b00c0f4247843d3cfc412d0b3a58b6be02a",
   "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "Release.zip"
+  "file_path": "Release.zip",
+  "software": {
+    "version": "2.1.26",
+    "format": "sentence-software-v1",
+    "sha256": "6b40de37cc4b9bb31be9bb6ebd5377094aed20367a9bc42c89bbc4d1148d1c97",
+    "application_sha256": "4238f127bfcfcb48204946ae6cf4c7f6f33021bc62c62099dddfcb8aec5ad82c",
+    "file_size": 68753846,
+    "commit_sha": "eb9b1ff55fab2c5ae8ab067fdf096dda241ca96c"
+  }
 }
