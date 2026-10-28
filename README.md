@@ -4,40 +4,34 @@
 
 SENTENCE is a Windows scripting workspace built with Tauri, with a Luau editor, Sentence Guide, SENCHAN AI assistance, Script Hub and Instance Explorer.
 
-**Application:** 2.6.13 · **SENInstaller:** 2.6.18
+**Current release: 2.1.26 · Windows x64**
 
-## Downloads
+## Download and start
 
-- [Download SENInstaller.exe](https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/SENInstaller.exe) — online installer and version checker.
-- [Download the portable ZIP](https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Debug.zip) — complete application with its required runtime folders and an empty scripts folder.
+- [Download SENTENCE 2.1.26 for Windows x64](https://github.com/DareQPlaysRBX/Sentence-INT/releases/download/v2.1.26/SENTENCE-2.1.26-win-x64.zip)
+- [Release notes and SHA-256 checksums](https://github.com/DareQPlaysRBX/Sentence-INT/releases/tag/v2.1.26)
+- [Latest published release](https://github.com/DareQPlaysRBX/Sentence-INT/releases/latest)
 
-## Installation
+Extract the complete ZIP and run SENTENCE.exe. Keep bin, binaries and scripts beside the executable. Put your own scripts in scripts. The public package contains no personal scripts, project data or AI keys.
 
-1. Download and run SENInstaller.exe.
-2. Choose a destination, language and shortcut preferences. New installations default to SentenceIDE on your desktop; detected installations retain their existing location.
-3. Read and accept the terms and project notices, then review the installation details.
-4. Confirm installation. The installer downloads the ZIP from GitLab, verifies it against its Git commit and installs the application.
+SENTENCE includes an embedded runtime and a Software Auto Updater. Microsoft Edge WebView2 and Microsoft Visual C++ Redistributable may be required by the interface and native components. SENCHAN uses your own provider API key; external MCP integration is optional.
 
-An internet connection is required. The installer checks the application version online and does not contain an offline application package. Keep bin, binaries and sentence-guide-mcp.exe beside SENTENCE.exe when using the portable ZIP. Put your own scripts in the scripts folder.
+## Automatic application updates
 
-AI chat uses your own provider API key. MCP integration is optional and configured from SENTENCE settings.
+At startup, supported releases check the `software` section of [sentence_update.json](https://github.com/DareQPlaysRBX/Sentence-INT/blob/main/sentence_update.json). A newer compatible Software.zip is downloaded from the exact GitLab commit recorded there, checked by SHA-256 and executable version, and staged before installation.
 
-## Update channel
+The project must save successfully before SENTENCE exits. A separate worker replaces the application EXE, keeps its predecessor and restarts the application. Download or validation errors preserve the installed version. A replacement or launch failure retains/restores the previous EXE. Personal scripts, settings and module files are not overwritten by the application updater.
 
-[View sentence_update.json](https://raw.githubusercontent.com/DareQPlaysRBX/Sentence-INT/main/sentence_update.json)
+Older releases without this updater need one manual installation of the current portable package. Application updates are separate from Xeno/Velocity module updates. Developer and headless builds do not update automatically.
 
-GitHub hosts the update information. GitLab hosts Debug.zip and SENInstaller.exe. No GitHub Release or individual BIN upload is required.
+## Publication workflow
 
-The tauri section of sentence_update.json describes the current Tauri release, including version, download_url, file_size, commit_sha, gitlab_project and file_path. The installer downloads the archive from the exact GitLab commit specified in this section, rather than trusting a moving branch.
+1. Build a higher application version with its embedded runtime. Prepare the full portable ZIP for GitHub Releases, and Software.zip containing only SENTENCE.exe and software-release.json.
+2. Publish the full portable ZIP, Software.zip and checksums in the matching GitHub Release.
+3. Commit Software.zip to GitLab dareqplays/Sentence-INT on main.
+4. Run Prepare-SoftwareUpdate.ps1 against that Software.zip. It verifies the published archive and generates the software entry with the exact GitLab commit, size, SHA-256 and application hash.
+5. Publish the merged sentence_update.json on GitHub main. Only then is that newer version offered by the updater.
 
-The original root fields are retained for legacy WPF clients. Do not replace those fields with the ZIP URL while older WPF clients still use this feed.
-
-## Publishing a new application version
-
-1. Build a clean portable release and upload it to GitLab main as Debug.zip, including all required dependencies.
-2. Obtain the GitLab commit for that archive and update the tauri fields in sentence_update.json on GitHub main. The supplied Prepare-Manifest.ps1 script can verify the uploaded ZIP and generate the merged JSON automatically.
-3. Publish a new SENInstaller.exe on GitLab when the installer itself changes. Its application download version is read from the online manifest.
-
-Updating an existing installation preserves personal scripts and AppData settings. The normal update check compares versions; it does not audit every installed file.
+The original WPF/installer fields in the shared manifest are preserved for compatibility; they do not identify the current Software Auto Updater release. Legacy SENInstaller, Debug.zip, Release.zip and Runtime.zip remain separate downloads. Use the GitHub Release linked above for SENTENCE 2.1.26.
 
 Made by **DareQPlays** | **Yume Bytes Community**
