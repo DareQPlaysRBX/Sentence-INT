@@ -4,7 +4,7 @@
 
 SENTENCE is a Windows scripting workspace built with Tauri, with a Luau editor, Sentence Guide, SENCHAN AI assistance, Script Hub and Instance Explorer.
 
-**Current release: 2.1.26 · Windows x64**
+**Portable download: 2.1.26 · Automatic update channel: 2.1.27 · Windows x64**
 
 ## Download and start
 
@@ -17,6 +17,8 @@ Extract the complete ZIP and run SENTENCE.exe. Keep bin, binaries and scripts be
 SENTENCE includes an embedded runtime and a Software Auto Updater. Microsoft Edge WebView2 and Microsoft Visual C++ Redistributable may be required by the interface and native components. SENCHAN uses your own provider API key; external MCP integration is optional.
 
 ## Automatic application updates
+
+The software update channel now offers **2.1.27**. Start SENTENCE 2.1.26 to receive it automatically. The GitHub Release 2.1.26 remains the bootstrap download.
 
 At startup, supported releases check the `software` section of [sentence_update.json](https://github.com/DareQPlaysRBX/Sentence-INT/blob/main/sentence_update.json). A newer compatible Software.zip is downloaded from the exact GitLab commit recorded there, checked by SHA-256 and executable version, and staged before installation.
 
