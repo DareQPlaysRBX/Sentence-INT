@@ -1,23 +1,23 @@
 {
-  "version": "2.1.25",
-  "sha256": "3c93d7545d6b04b542a6ae56a885e133fb07d7b9c04094c958796fefc807c3a2",
-  "application_sha256": "a0d53d3a07f5b5fd15933c64f06dab55fc7f8d60421274892276db0c94dea2bd",
-  "layout_version": 4,
-  "runtime_file_size": 37834248,
-  "runtime_sha256": "9d36fef4b54d82d24432ddc80cfa4554076b6804f741d48133d5e2a0777bec70",
-  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "Added a new Software Auto-Updater (SENTENCE will now automatically check for and install updates on startup). Made minor color adjustments to the Halloween 2026 Theme. Scripts selected in Instance Explorer will now be prioritized for decompilation. Various minor bug fixes and improvements. Test signature: Yume Bytes Community, self-signed and untrusted.",
-  "file_size": 91541060,
-  "is_mandatory": false,
-  "commit_sha": "0d763766e494c189eddd9cbb7c0046fb8b7db6b2",
-  "gitlab_project": "dareqplays/Sentence-INT",
-  "file_path": "Release.zip",
-  "software": {
-    "version": "2.1.25",
-    "format": "sentence-software-v1",
-    "sha256": "580d3740b88ff5f9cc881ba08a1829c9efb11a365bd68a0e9bbfbddfdfd3c041",
-    "application_sha256": "a0d53d3a07f5b5fd15933c64f06dab55fc7f8d60421274892276db0c94dea2bd",
-    "file_size": 68751943,
-    "commit_sha": "0d763766e494c189eddd9cbb7c0046fb8b7db6b2"
-  }
+    "version":  "2.1.30",
+    "sha256":  "065cc6c6cdfedce53f924d6c30f1c39a1fd86f4049da8946c66d71f37861e017",
+    "application_sha256":  "5e00b3ee07ed800fc0147ca66b18c719cd107b0c06efa34dbbb172cf06887e7a",
+    "layout_version":  4,
+    "runtime_file_size":  37836452,
+    "runtime_sha256":  "b89314b21714e00467f0134dd95a9a34930e0c365fb85a56920989cc69b801bd",
+    "download_url":  "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
+    "changelog":  "Velocity 1.5.6 with lua.expert decompilation; selected scripts wait for the current task; background preparation waits for game tree discovery; improved native JSON communication. Test signature: Yume Bytes Community, self-signed and untrusted.",
+    "file_size":  99863880,
+    "is_mandatory":  false,
+    "commit_sha":  "8692aa44e84c79409c2dce32fc302695fc7b2822",
+    "gitlab_project":  "dareqplays/Sentence-INT",
+    "file_path":  "Release.zip",
+    "software":  {
+                     "version":  "2.1.30",
+                     "format":  "sentence-software-v1",
+                     "sha256":  "a92d7adbfbadf9edb1056f65821ad451c29989e9095715a05de3019aee1d4b30",
+                     "application_sha256":  "5e00b3ee07ed800fc0147ca66b18c719cd107b0c06efa34dbbb172cf06887e7a",
+                     "file_size":  68751360,
+                     "commit_sha":  "8692aa44e84c79409c2dce32fc302695fc7b2822"
+                 }
 }
