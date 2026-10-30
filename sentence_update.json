@@ -1,23 +1,23 @@
 {
-    "version":  "2.1.30",
-    "sha256":  "065cc6c6cdfedce53f924d6c30f1c39a1fd86f4049da8946c66d71f37861e017",
-    "application_sha256":  "5e00b3ee07ed800fc0147ca66b18c719cd107b0c06efa34dbbb172cf06887e7a",
-    "layout_version":  4,
-    "runtime_file_size":  37836452,
-    "runtime_sha256":  "b89314b21714e00467f0134dd95a9a34930e0c365fb85a56920989cc69b801bd",
-    "download_url":  "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-    "changelog":  "Velocity 1.5.6 with lua.expert decompilation; selected scripts wait for the current task; background preparation waits for game tree discovery; improved native JSON communication. Test signature: Yume Bytes Community, self-signed and untrusted.",
-    "file_size":  99863880,
-    "is_mandatory":  false,
-    "commit_sha":  "8692aa44e84c79409c2dce32fc302695fc7b2822",
-    "gitlab_project":  "dareqplays/Sentence-INT",
-    "file_path":  "Release.zip",
-    "software":  {
-                     "version":  "2.1.30",
-                     "format":  "sentence-software-v1",
-                     "sha256":  "a92d7adbfbadf9edb1056f65821ad451c29989e9095715a05de3019aee1d4b30",
-                     "application_sha256":  "5e00b3ee07ed800fc0147ca66b18c719cd107b0c06efa34dbbb172cf06887e7a",
-                     "file_size":  68751360,
-                     "commit_sha":  "8692aa44e84c79409c2dce32fc302695fc7b2822"
-                 }
+  "version": "2.1.30",
+  "sha256": "9eacb8b878afacd616b6012984745851ee0b32a8cad83f08d31ace29b0be9e31",
+  "application_sha256": "66e75a1bc57df911da89b96dfdd38308d95e15a8e5914a2abcb984ab59c5437f",
+  "layout_version": 4,
+  "runtime_file_size": 37825139,
+  "runtime_sha256": "9d9dae2f7d67db4b710b04eeaf536ac7c06178b5a27e244f63f6d00f490fffe2",
+  "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
+  "changelog": "Refreshed Amoled Black palette; consistent sidebar spacing; local syntax highlighting; Script Hub search, tags and typography fixes; About available only in Home; automatic instance output; persistent DPAPI-protected Rscripts keys; application auto-updater removed.",
+  "file_size": 99833432,
+  "is_mandatory": false,
+  "commit_sha": "b2065c3ce2412e3bf280115211c59a0ed28a0485",
+  "gitlab_project": "dareqplays/Sentence-INT",
+  "file_path": "Release.zip",
+  "software": {
+    "version": "2.1.30",
+    "format": "sentence-software-v1",
+    "sha256": "64e13185f73219ebf9a98823c40d16b3a0bd1c1232655b77c11a03e012fde942",
+    "application_sha256": "66e75a1bc57df911da89b96dfdd38308d95e15a8e5914a2abcb984ab59c5437f",
+    "file_size": 68722732,
+    "commit_sha": "b2065c3ce2412e3bf280115211c59a0ed28a0485"
+  }
 }
