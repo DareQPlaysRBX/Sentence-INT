@@ -1,23 +1,23 @@
 {
-  "version": "2.1.30",
-  "sha256": "9eacb8b878afacd616b6012984745851ee0b32a8cad83f08d31ace29b0be9e31",
-  "application_sha256": "66e75a1bc57df911da89b96dfdd38308d95e15a8e5914a2abcb984ab59c5437f",
+  "version": "2.1.31",
+  "sha256": "ab326255d87d1380ce02b01cc98392ef98667d6d83682efabbcb65c3bcfef0a2",
+  "application_sha256": "0b621ca8e8bc327d5a983b12f638aaf459139de9ac4552069ca0516a68510ab3",
   "layout_version": 4,
-  "runtime_file_size": 37825139,
-  "runtime_sha256": "9d9dae2f7d67db4b710b04eeaf536ac7c06178b5a27e244f63f6d00f490fffe2",
+  "runtime_file_size": 37826491,
+  "runtime_sha256": "d204605ee1343b861b1077553d8335ab23f117eac1a396a5acc410ffbfa939c1",
   "download_url": "https://gitlab.com/dareqplays/Sentence-INT/-/raw/main/Release.zip",
-  "changelog": "Refreshed Amoled Black palette; consistent sidebar spacing; local syntax highlighting; Script Hub search, tags and typography fixes; About available only in Home; automatic instance output; persistent DPAPI-protected Rscripts keys; application auto-updater removed.",
-  "file_size": 99833432,
+  "changelog": "Velocity 1.5.9 with automatic decompiler startup after confirmed Attach, multi-selection deletion in Script Explorer, an updated WPF to Tauri migration changelog, and automatic cleanup of obsolete runtime files with log preservation.",
+  "file_size": 90807713,
   "is_mandatory": false,
-  "commit_sha": "b2065c3ce2412e3bf280115211c59a0ed28a0485",
+  "commit_sha": "730cc12d4823897856b4f2904557ca67a09d668e",
   "gitlab_project": "dareqplays/Sentence-INT",
   "file_path": "Release.zip",
   "software": {
-    "version": "2.1.30",
+    "version": "2.1.31",
     "format": "sentence-software-v1",
-    "sha256": "64e13185f73219ebf9a98823c40d16b3a0bd1c1232655b77c11a03e012fde942",
-    "application_sha256": "66e75a1bc57df911da89b96dfdd38308d95e15a8e5914a2abcb984ab59c5437f",
-    "file_size": 68722732,
-    "commit_sha": "b2065c3ce2412e3bf280115211c59a0ed28a0485"
+    "sha256": "347cccb773d35e82004cb2259e6554d081f9f169330a66116b8600726d227cff",
+    "application_sha256": "0b621ca8e8bc327d5a983b12f638aaf459139de9ac4552069ca0516a68510ab3",
+    "file_size": 68729317,
+    "commit_sha": "730cc12d4823897856b4f2904557ca67a09d668e"
   }
 }
